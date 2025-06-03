@@ -1,0 +1,82 @@
+[2025-06-01T17:09:56.576+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-01T17:09:56.598+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: log_monitoring_dag.start_spark_consumer scheduled__2025-06-01T16:55:00+00:00 [queued]>
+[2025-06-01T17:09:56.609+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: log_monitoring_dag.start_spark_consumer scheduled__2025-06-01T16:55:00+00:00 [queued]>
+[2025-06-01T17:09:56.610+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 2
+[2025-06-01T17:09:56.627+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): start_spark_consumer> on 2025-06-01 16:55:00+00:00
+[2025-06-01T17:09:57.078+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=442) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-06-01T17:09:57.080+0000] {standard_task_runner.py:72} INFO - Started process 443 to run task
+[2025-06-01T17:09:57.079+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'log_monitoring_dag', 'start_spark_consumer', 'scheduled__2025-06-01T16:55:00+00:00', '--job-id', '52', '--raw', '--subdir', 'DAGS_FOLDER/log_monitoring_dag.py', '--cfg-path', '/tmp/tmpqu1c93hw']
+[2025-06-01T17:09:57.082+0000] {standard_task_runner.py:105} INFO - Job 52: Subtask start_spark_consumer
+[2025-06-01T17:09:57.107+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-06-01T17:09:57.156+0000] {task_command.py:467} INFO - Running <TaskInstance: log_monitoring_dag.start_spark_consumer scheduled__2025-06-01T16:55:00+00:00 [running]> on host 61a0313acf02
+[2025-06-01T17:09:57.158+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-06-01T17:09:57.321+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='log_monitoring_dag' AIRFLOW_CTX_TASK_ID='start_spark_consumer' AIRFLOW_CTX_EXECUTION_DATE='2025-06-01T16:55:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-01T16:55:00+00:00'
+[2025-06-01T17:09:57.322+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-06-01T17:09:57.339+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-06-01T17:09:57.340+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'docker run --rm --network realtime_log_monitoring_default -v /opt/***/app:/app bitnami/spark:3.3.0 spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.0 /app/log_consumer.py']
+[2025-06-01T17:09:57.349+0000] {subprocess.py:86} INFO - Output:
+[2025-06-01T17:10:03.230+0000] {subprocess.py:93} INFO - [38;5;6m [38;5;5m17:10:03.22 [0m
+[2025-06-01T17:10:03.231+0000] {subprocess.py:93} INFO - [38;5;6m [38;5;5m17:10:03.23 [0m[1mWelcome to the Bitnami spark container[0m
+[2025-06-01T17:10:03.233+0000] {subprocess.py:93} INFO - [38;5;6m [38;5;5m17:10:03.23 [0mSubscribe to project updates by watching [1mhttps://github.com/bitnami/containers[0m
+[2025-06-01T17:10:03.235+0000] {subprocess.py:93} INFO - [38;5;6m [38;5;5m17:10:03.23 [0mSubmit issues and feature requests at [1mhttps://github.com/bitnami/containers/issues[0m
+[2025-06-01T17:10:03.237+0000] {subprocess.py:93} INFO - [38;5;6m [38;5;5m17:10:03.23 [0m
+[2025-06-01T17:10:03.304+0000] {subprocess.py:93} INFO - 
+[2025-06-01T17:10:05.970+0000] {subprocess.py:93} INFO - :: loading settings :: url = jar:file:/opt/bitnami/spark/jars/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2025-06-01T17:10:06.026+0000] {subprocess.py:93} INFO - Ivy Default Cache set to: /opt/bitnami/spark/.ivy2/cache
+[2025-06-01T17:10:06.027+0000] {subprocess.py:93} INFO - The jars for the packages stored in: /opt/bitnami/spark/.ivy2/jars
+[2025-06-01T17:10:06.031+0000] {subprocess.py:93} INFO - org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+[2025-06-01T17:10:06.032+0000] {subprocess.py:93} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-711bd095-6521-439b-9837-723a87e81bb1;1.0
+[2025-06-01T17:10:06.033+0000] {subprocess.py:93} INFO - 	confs: [default]
+[2025-06-01T17:10:10.733+0000] {subprocess.py:93} INFO - 	found org.apache.spark#spark-sql-kafka-0-10_2.12;3.2.0 in central
+[2025-06-01T17:10:11.255+0000] {subprocess.py:93} INFO - 	found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.2.0 in central
+[2025-06-01T17:10:11.580+0000] {subprocess.py:93} INFO - 	found org.apache.kafka#kafka-clients;2.8.0 in central
+[2025-06-01T17:10:11.899+0000] {subprocess.py:93} INFO - 	found org.lz4#lz4-java;1.7.1 in central
+[2025-06-01T17:10:12.214+0000] {subprocess.py:93} INFO - 	found org.xerial.snappy#snappy-java;1.1.8.4 in central
+[2025-06-01T17:10:13.762+0000] {subprocess.py:93} INFO - 	found org.slf4j#slf4j-api;1.7.30 in central
+[2025-06-01T17:10:17.448+0000] {subprocess.py:93} INFO - 	found org.apache.hadoop#hadoop-client-runtime;3.3.1 in central
+[2025-06-01T17:10:18.934+0000] {subprocess.py:93} INFO - 	found org.spark-project.spark#unused;1.0.0 in central
+[2025-06-01T17:10:19.418+0000] {subprocess.py:93} INFO - 	found org.apache.hadoop#hadoop-client-api;3.3.1 in central
+[2025-06-01T17:10:22.413+0000] {subprocess.py:93} INFO - 	found org.apache.htrace#htrace-core4;4.1.0-incubating in central
+[2025-06-01T17:10:25.154+0000] {subprocess.py:93} INFO - 	found commons-logging#commons-logging;1.1.3 in central
+[2025-06-01T17:11:54.520+0000] {job.py:229} INFO - Heartbeat recovered after 92.13 seconds
+[2025-06-01T17:11:54.534+0000] {subprocess.py:93} INFO - 	found com.google.code.findbugs#jsr305;3.0.0 in central
+[2025-06-01T17:12:01.086+0000] {job.py:229} INFO - Heartbeat recovered after 90.61 seconds
+[2025-06-01T17:12:01.712+0000] {subprocess.py:93} INFO - 	found org.apache.commons#commons-pool2;2.6.2 in central
+[2025-06-01T17:12:02.877+0000] {subprocess.py:93} INFO - downloading https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.2.0/spark-sql-kafka-0-10_2.12-3.2.0.jar ...
+[2025-06-01T17:12:05.854+0000] {subprocess.py:93} INFO - 	[SUCCESSFUL ] org.apache.spark#spark-sql-kafka-0-10_2.12;3.2.0!spark-sql-kafka-0-10_2.12.jar (3337ms)
+[2025-06-01T17:12:05.995+0000] {subprocess.py:93} INFO - downloading https://repo1.maven.org/maven2/org/apache/spark/spark-token-provider-kafka-0-10_2.12/3.2.0/spark-token-provider-kafka-0-10_2.12-3.2.0.jar ...
+[2025-06-01T17:12:06.621+0000] {subprocess.py:93} INFO - 	[SUCCESSFUL ] org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.2.0!spark-token-provider-kafka-0-10_2.12.jar (759ms)
+[2025-06-01T17:12:06.950+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to None. Terminating instance.
+[2025-06-01T17:12:06.970+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-06-01T17:12:07.157+0000] {subprocess.py:93} INFO - downloading https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/2.8.0/kafka-clients-2.8.0.jar ...
+[2025-06-01T17:12:09.775+0000] {process_utils.py:132} INFO - Sending 15 to group 443. PIDs of all processes in the group: [445, 443]
+[2025-06-01T17:12:09.802+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 443
+[2025-06-01T17:12:09.802+0000] {taskinstance.py:3092} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-06-01T17:12:09.803+0000] {subprocess.py:104} INFO - Sending SIGTERM signal to process group
+[2025-06-01T17:12:09.819+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 240, in execute
+    result = self.subprocess_hook.run_command(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/hooks/subprocess.py", line 91, in run_command
+    for raw_line in iter(self.sub_process.stdout.readline, b""):
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3094, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2025-06-01T17:12:09.930+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=log_monitoring_dag, task_id=start_spark_consumer, run_id=scheduled__2025-06-01T16:55:00+00:00, execution_date=20250601T165500, start_date=20250601T170956, end_date=20250601T171209
+[2025-06-01T17:12:09.955+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-06-01T17:12:10.304+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=443, status='terminated', exitcode=2, started='17:09:56') (443) terminated with exit code 2
+[2025-06-01T17:12:11.064+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=445, status='terminated', started='17:09:56') (445) terminated with exit code None

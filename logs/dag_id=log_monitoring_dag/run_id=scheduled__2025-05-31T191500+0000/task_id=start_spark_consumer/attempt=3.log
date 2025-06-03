@@ -1,0 +1,59 @@
+[2025-06-01T11:22:41.145+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-01T11:23:47.640+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: log_monitoring_dag.start_spark_consumer scheduled__2025-05-31T19:15:00+00:00 [queued]>
+[2025-06-01T11:24:00.909+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: log_monitoring_dag.start_spark_consumer scheduled__2025-05-31T19:15:00+00:00 [queued]>
+[2025-06-01T11:24:01.346+0000] {taskinstance.py:2865} INFO - Starting attempt 3 of 4
+[2025-06-01T11:25:41.115+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): start_spark_consumer> on 2025-05-31 19:15:00+00:00
+[2025-06-01T11:59:26.725+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=651) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-06-01T11:59:48.843+0000] {standard_task_runner.py:72} INFO - Started process 720 to run task
+[2025-06-01T11:59:41.216+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'log_monitoring_dag', 'start_spark_consumer', 'scheduled__2025-05-31T19:15:00+00:00', '--job-id', '113', '--raw', '--subdir', 'DAGS_FOLDER/log_monitoring_dag.py', '--cfg-path', '/tmp/tmpn_n7w0hb']
+[2025-06-01T11:59:56.421+0000] {standard_task_runner.py:105} INFO - Job 113: Subtask start_spark_consumer
+[2025-06-01T12:00:00.015+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-06-01T12:00:00.509+0000] {job.py:229} INFO - Heartbeat recovered after 42339.16 seconds
+[2025-06-01T12:00:21.934+0000] {task_command.py:467} INFO - Running <TaskInstance: log_monitoring_dag.start_spark_consumer scheduled__2025-05-31T19:15:00+00:00 [running]> on host 4f4c6676a48d
+[2025-06-01T12:00:22.168+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-06-01T12:00:22.359+0000] {job.py:229} INFO - Heartbeat recovered after 22.60 seconds
+[2025-06-01T12:00:41.085+0000] {job.py:229} INFO - Heartbeat recovered after 19.39 seconds
+[2025-06-01T12:00:41.297+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to up_for_retry. Terminating instance.
+[2025-06-01T12:00:41.307+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-06-01T12:00:41.384+0000] {process_utils.py:132} INFO - Sending 15 to group 720. PIDs of all processes in the group: [720]
+[2025-06-01T12:00:41.517+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 720
+[2025-06-01T12:00:41.550+0000] {taskinstance.py:3092} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-06-01T12:00:41.628+0000] {subprocess.py:104} INFO - Sending SIGTERM signal to process group
+[2025-06-01T12:00:42.378+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3111, in _execute_task_with_callbacks
+    jinja_env = dag.get_template_env()
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 1819, in get_template_env
+    env = airflow.templates.SandboxedEnvironment(**jinja_env_options)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/templates.py", line 31, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.12/site-packages/jinja2/sandbox.py", line 254, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.12/site-packages/jinja2/environment.py", line 365, in __init__
+    self.extensions = load_extensions(self, extensions)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/jinja2/environment.py", line 119, in load_extensions
+    extension = t.cast(t.Type["Extension"], import_string(extension))
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/jinja2/utils.py", line 149, in import_string
+    return getattr(__import__(module, None, None, [obj]), obj)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/jinja2/ext.py", line 734, in <module>
+    class _CommentFinder:
+  File "/home/airflow/.local/lib/python3.12/site-packages/jinja2/ext.py", line 742, in _CommentFinder
+    self, tokens: t.Sequence[t.Tuple[int, str, str]], comment_tags: t.Sequence[str]
+                  ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/typing.py", line 395, in inner
+    return _caches[func](*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3094, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2025-06-01T12:00:45.576+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=log_monitoring_dag, task_id=start_spark_consumer, run_id=scheduled__2025-05-31T19:15:00+00:00, execution_date=20250531T191500, start_date=20250601T112347, end_date=20250601T120045
+[2025-06-01T12:00:45.891+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-06-01T12:00:46.089+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=720, status='terminated', exitcode=2, started='11:55:52') (720) terminated with exit code 2
+[2025-06-01T12:00:46.136+0000] {standard_task_runner.py:217} INFO - Process not found (most likely exited), stop collecting metrics

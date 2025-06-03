@@ -1,0 +1,19 @@
+[2025-06-01T11:22:38.517+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-01T11:23:12.769+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: log_monitoring_dag.start_spark_consumer scheduled__2025-05-31T23:35:00+00:00 [queued]>
+[2025-06-01T11:23:19.317+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: log_monitoring_dag.start_spark_consumer scheduled__2025-05-31T23:35:00+00:00 [queued]>
+[2025-06-01T11:23:19.623+0000] {taskinstance.py:2865} INFO - Starting attempt 3 of 4
+[2025-06-01T11:23:40.084+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): start_spark_consumer> on 2025-05-31 23:35:00+00:00
+[2025-06-01T11:23:50.244+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=654) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-06-01T11:23:53.703+0000] {standard_task_runner.py:72} INFO - Started process 709 to run task
+[2025-06-01T11:23:47.408+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'log_monitoring_dag', 'start_spark_consumer', 'scheduled__2025-05-31T23:35:00+00:00', '--job-id', '111', '--raw', '--subdir', 'DAGS_FOLDER/log_monitoring_dag.py', '--cfg-path', '/tmp/tmpvykdvsfs']
+[2025-06-01T11:24:18.637+0000] {standard_task_runner.py:105} INFO - Job 111: Subtask start_spark_consumer
+[2025-06-01T11:25:18.709+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-06-01T11:57:05.919+0000] {job.py:229} INFO - Heartbeat recovered after 42153.75 seconds
+[2025-06-01T11:59:47.189+0000] {local_task_job_runner.py:228} ERROR - Heartbeat time limit exceeded!
+[2025-06-01T11:59:47.190+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-06-01T11:59:48.750+0000] {task_command.py:467} INFO - Running <TaskInstance: log_monitoring_dag.start_spark_consumer scheduled__2025-05-31T23:35:00+00:00 [None]> on host 4f4c6676a48d
+[2025-06-01T11:59:47.192+0000] {process_utils.py:132} INFO - Sending 15 to group 709. PIDs of all processes in the group: [709]
+[2025-06-01T11:59:49.846+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 709
+[2025-06-01T11:59:49.847+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-06-01T11:59:50.250+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=709, status='terminated', exitcode=<Negsignal.SIGTERM: -15>, started='11:23:42') (709) terminated with exit code -15
+[2025-06-01T11:59:50.622+0000] {standard_task_runner.py:217} INFO - Process not found (most likely exited), stop collecting metrics

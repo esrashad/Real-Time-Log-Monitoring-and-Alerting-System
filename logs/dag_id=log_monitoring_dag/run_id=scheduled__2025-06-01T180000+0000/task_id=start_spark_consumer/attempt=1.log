@@ -1,0 +1,224 @@
+[2025-06-01T18:08:25.851+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-01T18:08:25.868+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: log_monitoring_dag.start_spark_consumer scheduled__2025-06-01T18:00:00+00:00 [queued]>
+[2025-06-01T18:08:25.877+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: log_monitoring_dag.start_spark_consumer scheduled__2025-06-01T18:00:00+00:00 [queued]>
+[2025-06-01T18:08:25.878+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-06-01T18:08:26.299+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): start_spark_consumer> on 2025-06-01 18:00:00+00:00
+[2025-06-01T18:08:26.307+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=937) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-06-01T18:08:26.308+0000] {standard_task_runner.py:72} INFO - Started process 947 to run task
+[2025-06-01T18:08:26.307+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'log_monitoring_dag', 'start_spark_consumer', 'scheduled__2025-06-01T18:00:00+00:00', '--job-id', '86', '--raw', '--subdir', 'DAGS_FOLDER/log_monitoring_dag.py', '--cfg-path', '/tmp/tmp47mbvn62']
+[2025-06-01T18:08:26.309+0000] {standard_task_runner.py:105} INFO - Job 86: Subtask start_spark_consumer
+[2025-06-01T18:08:26.328+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-06-01T18:08:26.368+0000] {task_command.py:467} INFO - Running <TaskInstance: log_monitoring_dag.start_spark_consumer scheduled__2025-06-01T18:00:00+00:00 [running]> on host 61a0313acf02
+[2025-06-01T18:08:26.369+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-06-01T18:08:43.647+0000] {job.py:229} INFO - Heartbeat recovered after 19.87 seconds
+[2025-06-01T18:08:43.879+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='log_monitoring_dag' AIRFLOW_CTX_TASK_ID='start_spark_consumer' AIRFLOW_CTX_EXECUTION_DATE='2025-06-01T18:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-01T18:00:00+00:00'
+[2025-06-01T18:08:43.888+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-06-01T18:08:43.903+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-06-01T18:08:43.998+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n            docker run --rm             --network realtime_log_monitoring_default             -v /opt/***/app:/app             bitnami/spark:3.3.0             spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.0 /app/log_consumer.py\n        ']
+[2025-06-01T18:08:44.011+0000] {subprocess.py:86} INFO - Output:
+[2025-06-01T18:10:22.934+0000] {job.py:229} INFO - Heartbeat recovered after 14.33 seconds
+[2025-06-01T18:10:32.104+0000] {job.py:229} INFO - Heartbeat recovered after 10.86 seconds
+[2025-06-01T18:12:25.015+0000] {job.py:229} INFO - Heartbeat recovered after 13.46 seconds
+[2025-06-01T18:13:19.903+0000] {job.py:229} INFO - Heartbeat recovered after 15.62 seconds
+[2025-06-01T18:13:44.528+0000] {job.py:229} INFO - Heartbeat recovered after 18.73 seconds
+[2025-06-01T18:13:49.725+0000] {job.py:229} INFO - Heartbeat recovered after 17.97 seconds
+[2025-06-01T18:14:01.102+0000] {job.py:229} INFO - Heartbeat recovered after 11.38 seconds
+[2025-06-01T18:14:51.762+0000] {job.py:229} INFO - Heartbeat recovered after 11.42 seconds
+[2025-06-01T18:15:32.614+0000] {job.py:229} INFO - Heartbeat recovered after 41.80 seconds
+[2025-06-01T18:15:38.226+0000] {job.py:229} INFO - Heartbeat recovered after 26.74 seconds
+[2025-06-01T18:16:24.653+0000] {job.py:229} INFO - Heartbeat recovered after 16.87 seconds
+[2025-06-01T18:16:35.487+0000] {job.py:229} INFO - Heartbeat recovered after 12.87 seconds
+[2025-06-01T18:17:23.072+0000] {job.py:229} INFO - Heartbeat recovered after 32.10 seconds
+[2025-06-01T18:17:53.126+0000] {job.py:229} INFO - Heartbeat recovered after 31.15 seconds
+[2025-06-01T18:19:22.593+0000] {job.py:229} INFO - Heartbeat recovered after 67.56 seconds
+[2025-06-01T18:19:42.010+0000] {job.py:229} INFO - Heartbeat recovered after 10.88 seconds
+[2025-06-01T18:20:20.787+0000] {job.py:229} INFO - Heartbeat recovered after 23.29 seconds
+[2025-06-01T18:20:28.265+0000] {job.py:229} INFO - Heartbeat recovered after 17.78 seconds
+[2025-06-01T18:21:34.596+0000] {subprocess.py:93} INFO - [38;5;6m [38;5;5m18:21:33.74 [0m
+[2025-06-01T18:21:34.880+0000] {subprocess.py:93} INFO - [38;5;6m [38;5;5m18:21:34.58 [0m[1mWelcome to the Bitnami spark container[0m
+[2025-06-01T18:21:34.902+0000] {subprocess.py:93} INFO - [38;5;6m [38;5;5m18:21:34.59 [0mSubscribe to project updates by watching [1mhttps://github.com/bitnami/containers[0m
+[2025-06-01T18:21:34.939+0000] {subprocess.py:93} INFO - [38;5;6m [38;5;5m18:21:34.63 [0mSubmit issues and feature requests at [1mhttps://github.com/bitnami/containers/issues[0m
+[2025-06-01T18:21:34.952+0000] {subprocess.py:93} INFO - [38;5;6m [38;5;5m18:21:34.83 [0m
+[2025-06-01T18:21:38.939+0000] {subprocess.py:93} INFO - 
+[2025-06-01T18:23:42.788+0000] {job.py:229} INFO - Heartbeat recovered after 64.79 seconds
+[2025-06-01T18:23:48.124+0000] {job.py:229} INFO - Heartbeat recovered after 62.59 seconds
+[2025-06-01T18:24:53.908+0000] {job.py:229} INFO - Heartbeat recovered after 10.66 seconds
+[2025-06-01T18:26:11.233+0000] {job.py:229} INFO - Heartbeat recovered after 72.04 seconds
+[2025-06-01T18:26:23.560+0000] {job.py:229} INFO - Heartbeat recovered after 76.92 seconds
+[2025-06-01T18:26:35.370+0000] {job.py:229} INFO - Heartbeat recovered after 12.20 seconds
+[2025-06-01T18:27:42.548+0000] {job.py:229} INFO - Heartbeat recovered after 52.99 seconds
+[2025-06-01T18:27:56.724+0000] {job.py:229} INFO - Heartbeat recovered after 14.32 seconds
+[2025-06-01T18:29:30.373+0000] {job.py:229} INFO - Heartbeat recovered after 88.75 seconds
+[2025-06-01T18:29:53.388+0000] {job.py:229} INFO - Heartbeat recovered after 94.66 seconds
+[2025-06-01T18:30:06.705+0000] {job.py:229} INFO - Heartbeat recovered after 14.41 seconds
+[2025-06-01T18:30:32.191+0000] {job.py:229} INFO - Heartbeat recovered after 19.52 seconds
+[2025-06-01T18:30:44.673+0000] {job.py:229} INFO - Heartbeat recovered after 21.40 seconds
+[2025-06-01T18:31:06.181+0000] {job.py:229} INFO - Heartbeat recovered after 22.42 seconds
+[2025-06-01T18:31:22.742+0000] {job.py:229} INFO - Heartbeat recovered after 19.43 seconds
+[2025-06-01T18:33:08.934+0000] {job.py:229} INFO - Heartbeat recovered after 107.11 seconds
+[2025-06-01T18:33:21.994+0000] {job.py:229} INFO - Heartbeat recovered after 109.04 seconds
+[2025-06-01T18:33:43.324+0000] {subprocess.py:93} INFO - :: loading settings :: url = jar:file:/opt/bitnami/spark/jars/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2025-06-01T18:33:48.359+0000] {subprocess.py:93} INFO - Ivy Default Cache set to: /opt/bitnami/spark/.ivy2/cache
+[2025-06-01T18:33:48.406+0000] {subprocess.py:93} INFO - The jars for the packages stored in: /opt/bitnami/spark/.ivy2/jars
+[2025-06-01T18:33:48.482+0000] {subprocess.py:93} INFO - org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+[2025-06-01T18:33:48.508+0000] {subprocess.py:93} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-ef4d4943-400d-4fa8-872f-e206f00d4ad1;1.0
+[2025-06-01T18:33:48.509+0000] {subprocess.py:93} INFO - 	confs: [default]
+[2025-06-01T18:35:27.886+0000] {job.py:229} INFO - Heartbeat recovered after 101.61 seconds
+[2025-06-01T18:35:58.166+0000] {job.py:229} INFO - Heartbeat recovered after 112.58 seconds
+[2025-06-01T18:36:39.850+0000] {job.py:229} INFO - Heartbeat recovered after 42.20 seconds
+[2025-06-01T18:37:46.910+0000] {job.py:229} INFO - Heartbeat recovered after 67.64 seconds
+[2025-06-01T18:37:57.994+0000] {job.py:229} INFO - Heartbeat recovered after 11.27 seconds
+[2025-06-01T18:37:58.240+0000] {subprocess.py:93} INFO - You probably access the destination server through a proxy server that is not well configured.
+[2025-06-01T18:37:58.338+0000] {subprocess.py:93} INFO - You probably access the destination server through a proxy server that is not well configured.
+[2025-06-01T18:38:03.738+0000] {subprocess.py:93} INFO - You probably access the destination server through a proxy server that is not well configured.
+[2025-06-01T18:38:03.794+0000] {subprocess.py:93} INFO - You probably access the destination server through a proxy server that is not well configured.
+[2025-06-01T18:38:04.073+0000] {subprocess.py:93} INFO - :: resolution report :: resolve 255645ms :: artifacts dl 0ms
+[2025-06-01T18:38:04.073+0000] {subprocess.py:93} INFO - 	:: modules in use:
+[2025-06-01T18:38:05.998+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2025-06-01T18:38:06.029+0000] {subprocess.py:93} INFO - 	|                  |            modules            ||   artifacts   |
+[2025-06-01T18:38:06.339+0000] {subprocess.py:93} INFO - 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2025-06-01T18:38:07.025+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2025-06-01T18:38:07.058+0000] {subprocess.py:93} INFO - 	|      default     |   1   |   0   |   0   |   0   ||   0   |   0   |
+[2025-06-01T18:38:07.058+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2025-06-01T18:38:07.083+0000] {subprocess.py:93} INFO - 
+[2025-06-01T18:38:07.133+0000] {subprocess.py:93} INFO - :: problems summary ::
+[2025-06-01T18:38:07.134+0000] {subprocess.py:93} INFO - :::: WARNINGS
+[2025-06-01T18:38:07.134+0000] {subprocess.py:93} INFO - 	Host repo1.maven.org not found. url=https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.2.0/spark-sql-kafka-0-10_2.12-3.2.0.pom
+[2025-06-01T18:38:07.218+0000] {subprocess.py:93} INFO - 
+[2025-06-01T18:38:07.269+0000] {subprocess.py:93} INFO - 	Host repo1.maven.org not found. url=https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.2.0/spark-sql-kafka-0-10_2.12-3.2.0.jar
+[2025-06-01T18:38:07.270+0000] {subprocess.py:93} INFO - 
+[2025-06-01T18:38:07.270+0000] {subprocess.py:93} INFO - 	Host repos.spark-packages.org not found. url=https://repos.spark-packages.org/org/apache/spark/spark-sql-kafka-0-10_2.12/3.2.0/spark-sql-kafka-0-10_2.12-3.2.0.pom
+[2025-06-01T18:38:07.293+0000] {subprocess.py:93} INFO - 
+[2025-06-01T18:38:07.653+0000] {subprocess.py:93} INFO - 	Host repos.spark-packages.org not found. url=https://repos.spark-packages.org/org/apache/spark/spark-sql-kafka-0-10_2.12/3.2.0/spark-sql-kafka-0-10_2.12-3.2.0.jar
+[2025-06-01T18:38:07.653+0000] {subprocess.py:93} INFO - 
+[2025-06-01T18:38:07.655+0000] {subprocess.py:93} INFO - 		module not found: org.apache.spark#spark-sql-kafka-0-10_2.12;3.2.0
+[2025-06-01T18:38:08.498+0000] {subprocess.py:93} INFO - 
+[2025-06-01T18:38:08.498+0000] {subprocess.py:93} INFO - 	==== local-m2-cache: tried
+[2025-06-01T18:38:08.499+0000] {subprocess.py:93} INFO - 
+[2025-06-01T18:38:08.561+0000] {subprocess.py:93} INFO - 	  file:/opt/bitnami/spark/.m2/repository/org/apache/spark/spark-sql-kafka-0-10_2.12/3.2.0/spark-sql-kafka-0-10_2.12-3.2.0.pom
+[2025-06-01T18:38:08.755+0000] {subprocess.py:93} INFO - 
+[2025-06-01T18:38:08.863+0000] {subprocess.py:93} INFO - 	  -- artifact org.apache.spark#spark-sql-kafka-0-10_2.12;3.2.0!spark-sql-kafka-0-10_2.12.jar:
+[2025-06-01T18:38:08.988+0000] {subprocess.py:93} INFO - 
+[2025-06-01T18:38:09.011+0000] {subprocess.py:93} INFO - 	  file:/opt/bitnami/spark/.m2/repository/org/apache/spark/spark-sql-kafka-0-10_2.12/3.2.0/spark-sql-kafka-0-10_2.12-3.2.0.jar
+[2025-06-01T18:38:09.014+0000] {subprocess.py:93} INFO - 
+[2025-06-01T18:38:09.067+0000] {subprocess.py:93} INFO - 	==== local-ivy-cache: tried
+[2025-06-01T18:38:09.097+0000] {subprocess.py:93} INFO - 
+[2025-06-01T18:38:09.110+0000] {subprocess.py:93} INFO - 	  /opt/bitnami/spark/.ivy2/local/org.apache.spark/spark-sql-kafka-0-10_2.12/3.2.0/ivys/ivy.xml
+[2025-06-01T18:38:09.111+0000] {subprocess.py:93} INFO - 
+[2025-06-01T18:38:09.111+0000] {subprocess.py:93} INFO - 	  -- artifact org.apache.spark#spark-sql-kafka-0-10_2.12;3.2.0!spark-sql-kafka-0-10_2.12.jar:
+[2025-06-01T18:38:09.163+0000] {subprocess.py:93} INFO - 
+[2025-06-01T18:38:09.164+0000] {subprocess.py:93} INFO - 	  /opt/bitnami/spark/.ivy2/local/org.apache.spark/spark-sql-kafka-0-10_2.12/3.2.0/jars/spark-sql-kafka-0-10_2.12.jar
+[2025-06-01T18:38:09.164+0000] {subprocess.py:93} INFO - 
+[2025-06-01T18:38:09.165+0000] {subprocess.py:93} INFO - 	==== central: tried
+[2025-06-01T18:38:09.364+0000] {subprocess.py:93} INFO - 
+[2025-06-01T18:38:09.364+0000] {subprocess.py:93} INFO - 	  https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.2.0/spark-sql-kafka-0-10_2.12-3.2.0.pom
+[2025-06-01T18:38:09.365+0000] {subprocess.py:93} INFO - 
+[2025-06-01T18:38:09.366+0000] {subprocess.py:93} INFO - 	  -- artifact org.apache.spark#spark-sql-kafka-0-10_2.12;3.2.0!spark-sql-kafka-0-10_2.12.jar:
+[2025-06-01T18:38:09.366+0000] {subprocess.py:93} INFO - 
+[2025-06-01T18:38:09.367+0000] {subprocess.py:93} INFO - 	  https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.2.0/spark-sql-kafka-0-10_2.12-3.2.0.jar
+[2025-06-01T18:38:09.368+0000] {subprocess.py:93} INFO - 
+[2025-06-01T18:38:09.368+0000] {subprocess.py:93} INFO - 	==== spark-packages: tried
+[2025-06-01T18:38:09.565+0000] {subprocess.py:93} INFO - 
+[2025-06-01T18:38:09.573+0000] {subprocess.py:93} INFO - 	  https://repos.spark-packages.org/org/apache/spark/spark-sql-kafka-0-10_2.12/3.2.0/spark-sql-kafka-0-10_2.12-3.2.0.pom
+[2025-06-01T18:38:09.575+0000] {subprocess.py:93} INFO - 
+[2025-06-01T18:38:09.576+0000] {subprocess.py:93} INFO - 	  -- artifact org.apache.spark#spark-sql-kafka-0-10_2.12;3.2.0!spark-sql-kafka-0-10_2.12.jar:
+[2025-06-01T18:38:09.576+0000] {subprocess.py:93} INFO - 
+[2025-06-01T18:38:09.576+0000] {subprocess.py:93} INFO - 	  https://repos.spark-packages.org/org/apache/spark/spark-sql-kafka-0-10_2.12/3.2.0/spark-sql-kafka-0-10_2.12-3.2.0.jar
+[2025-06-01T18:38:09.577+0000] {subprocess.py:93} INFO - 
+[2025-06-01T18:38:09.578+0000] {subprocess.py:93} INFO - 		::::::::::::::::::::::::::::::::::::::::::::::
+[2025-06-01T18:38:09.604+0000] {subprocess.py:93} INFO - 
+[2025-06-01T18:38:09.604+0000] {subprocess.py:93} INFO - 		::          UNRESOLVED DEPENDENCIES         ::
+[2025-06-01T18:38:09.662+0000] {subprocess.py:93} INFO - 
+[2025-06-01T18:38:09.669+0000] {subprocess.py:93} INFO - 		::::::::::::::::::::::::::::::::::::::::::::::
+[2025-06-01T18:38:09.676+0000] {subprocess.py:93} INFO - 
+[2025-06-01T18:38:09.686+0000] {subprocess.py:93} INFO - 		:: org.apache.spark#spark-sql-kafka-0-10_2.12;3.2.0: not found
+[2025-06-01T18:38:09.745+0000] {subprocess.py:93} INFO - 
+[2025-06-01T18:38:09.749+0000] {subprocess.py:93} INFO - 		::::::::::::::::::::::::::::::::::::::::::::::
+[2025-06-01T18:38:09.755+0000] {subprocess.py:93} INFO - 
+[2025-06-01T18:38:09.762+0000] {subprocess.py:93} INFO - 
+[2025-06-01T18:38:09.763+0000] {subprocess.py:93} INFO - 
+[2025-06-01T18:38:09.805+0000] {subprocess.py:93} INFO - :: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
+[2025-06-01T18:38:09.846+0000] {subprocess.py:93} INFO - Exception in thread "main" java.lang.RuntimeException: [unresolved dependency: org.apache.spark#spark-sql-kafka-0-10_2.12;3.2.0: not found]
+[2025-06-01T18:38:10.115+0000] {subprocess.py:93} INFO - 	at org.apache.spark.deploy.SparkSubmitUtils$.resolveMavenCoordinates(SparkSubmit.scala:1456)
+[2025-06-01T18:38:10.138+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.DependencyUtils$.resolveMavenDependencies(DependencyUtils.scala:185)
+[2025-06-01T18:38:10.138+0000] {subprocess.py:93} INFO - 	at org.apache.spark.deploy.SparkSubmit.prepareSubmitEnvironment(SparkSubmit.scala:308)
+[2025-06-01T18:38:10.139+0000] {subprocess.py:93} INFO - 	at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:901)
+[2025-06-01T18:38:10.185+0000] {subprocess.py:93} INFO - 	at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:180)
+[2025-06-01T18:38:10.186+0000] {subprocess.py:93} INFO - 	at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:203)
+[2025-06-01T18:38:10.187+0000] {subprocess.py:93} INFO - 	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:90)
+[2025-06-01T18:38:10.379+0000] {subprocess.py:93} INFO - 	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1046)
+[2025-06-01T18:38:10.739+0000] {subprocess.py:93} INFO - 	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1055)
+[2025-06-01T18:38:10.962+0000] {subprocess.py:93} INFO - 	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+[2025-06-01T18:39:29.935+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-06-01T18:39:40.453+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 249, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-06-01T18:39:42.745+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=log_monitoring_dag, task_id=start_spark_consumer, run_id=scheduled__2025-06-01T18:00:00+00:00, execution_date=20250601T180000, start_date=20250601T180825, end_date=20250601T183942
+[2025-06-01T18:39:46.458+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-06-01T18:39:47.274+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 86 for task start_spark_consumer (Bash command failed. The command returned a non-zero exit code 1.; 947)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 249, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-06-01T18:39:48.220+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-06-01T18:39:51.517+0000] {standard_task_runner.py:217} INFO - Process not found (most likely exited), stop collecting metrics
+[2025-06-01T18:39:54.655+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-01T18:39:54.660+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

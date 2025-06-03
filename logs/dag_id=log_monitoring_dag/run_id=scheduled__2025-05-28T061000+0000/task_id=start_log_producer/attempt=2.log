@@ -1,0 +1,36 @@
+[2025-05-31T14:29:46.929+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-05-31T14:29:46.965+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: log_monitoring_dag.start_log_producer scheduled__2025-05-28T06:10:00+00:00 [queued]>
+[2025-05-31T14:29:46.983+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: log_monitoring_dag.start_log_producer scheduled__2025-05-28T06:10:00+00:00 [queued]>
+[2025-05-31T14:29:46.987+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 2
+[2025-05-31T14:29:47.018+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): start_log_producer> on 2025-05-28 06:10:00+00:00
+[2025-05-31T14:29:47.074+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=179) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-05-31T14:29:47.069+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'log_monitoring_dag', 'start_log_producer', 'scheduled__2025-05-28T06:10:00+00:00', '--job-id', '105', '--raw', '--subdir', 'DAGS_FOLDER/log_monitoring_dag.py', '--cfg-path', '/tmp/tmpa0o47_dm']
+[2025-05-31T14:29:47.077+0000] {standard_task_runner.py:72} INFO - Started process 193 to run task
+[2025-05-31T14:29:47.078+0000] {standard_task_runner.py:105} INFO - Job 105: Subtask start_log_producer
+[2025-05-31T14:29:47.114+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-05-31T14:29:47.187+0000] {task_command.py:467} INFO - Running <TaskInstance: log_monitoring_dag.start_log_producer scheduled__2025-05-28T06:10:00+00:00 [running]> on host 1d31c4e9dbe9
+[2025-05-31T14:29:47.189+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-05-31T14:29:47.592+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='log_monitoring_dag' AIRFLOW_CTX_TASK_ID='start_log_producer' AIRFLOW_CTX_EXECUTION_DATE='2025-05-28T06:10:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-28T06:10:00+00:00'
+[2025-05-31T14:29:47.603+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-05-31T14:29:47.684+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-05-31T14:29:47.691+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/app && python -u log_producer.py']
+[2025-05-31T14:29:47.730+0000] {subprocess.py:86} INFO - Output:
+[2025-05-31T14:30:07.477+0000] {job.py:229} INFO - Heartbeat recovered after 13.21 seconds
+[2025-05-31T14:30:21.333+0000] {job.py:229} INFO - Heartbeat recovered after 15.64 seconds
+[2025-05-31T14:30:31.978+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-05-31T14:30:32.281+0000] {subprocess.py:93} INFO -   File "/opt/***/app/log_producer.py", line 7, in <module>
+[2025-05-31T14:30:34.569+0000] {subprocess.py:93} INFO -     producer = KafkaProducer(
+[2025-05-31T14:30:34.589+0000] {subprocess.py:93} INFO -                ^^^^^^^^^^^^^^
+[2025-05-31T14:30:34.590+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/kafka/producer/kafka.py", line 481, in __init__
+[2025-05-31T14:30:34.594+0000] {subprocess.py:93} INFO -     client = self.config['kafka_client'](
+[2025-05-31T14:30:34.595+0000] {subprocess.py:93} INFO -              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-05-31T14:30:34.595+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/kafka/client_async.py", line 262, in __init__
+[2025-05-31T14:30:34.792+0000] {subprocess.py:93} INFO -     self.config['api_version'] = self.check_version()
+[2025-05-31T14:30:34.819+0000] {subprocess.py:93} INFO -                                  ^^^^^^^^^^^^^^^^^^^^
+[2025-05-31T14:30:34.821+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/kafka/client_async.py", line 1074, in check_version
+[2025-05-31T14:30:34.823+0000] {subprocess.py:93} INFO -     raise Errors.NoBrokersAvailable()
+[2025-05-31T14:30:34.824+0000] {subprocess.py:93} INFO - kafka.errors.NoBrokersAvailable: NoBrokersAvailable
+[2025-05-31T14:30:44.015+0000] {job.py:229} INFO - Heartbeat recovered after 15.35 seconds
+[2025-05-31T14:30:58.731+0000] {job.py:229} INFO - Heartbeat recovered after 15.43 seconds
+[2025-05-31T14:31:18.829+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-05-31T14:31:23.861+0000] {job.py:229} INFO - Heartbeat recovered after 27.22 seconds

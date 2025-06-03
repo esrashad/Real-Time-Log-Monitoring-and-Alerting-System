@@ -1,0 +1,370 @@
+[2025-06-01T23:36:06.616+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-01T23:36:06.635+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: log_monitoring_dag.start_spark_consumer scheduled__2025-06-01T23:00:00+00:00 [queued]>
+[2025-06-01T23:36:06.648+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: log_monitoring_dag.start_spark_consumer scheduled__2025-06-01T23:00:00+00:00 [queued]>
+[2025-06-01T23:36:06.649+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 2
+[2025-06-01T23:36:06.704+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): start_spark_consumer> on 2025-06-01 23:00:00+00:00
+[2025-06-01T23:36:06.897+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=412) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-06-01T23:36:06.955+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'log_monitoring_dag', 'start_spark_consumer', 'scheduled__2025-06-01T23:00:00+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/log_monitoring_dag.py', '--cfg-path', '/tmp/tmp712xl3ah']
+[2025-06-01T23:36:06.959+0000] {standard_task_runner.py:105} INFO - Job 13: Subtask start_spark_consumer
+[2025-06-01T23:36:06.920+0000] {standard_task_runner.py:72} INFO - Started process 415 to run task
+[2025-06-01T23:36:07.683+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-06-01T23:36:14.939+0000] {task_command.py:467} INFO - Running <TaskInstance: log_monitoring_dag.start_spark_consumer scheduled__2025-06-01T23:00:00+00:00 [running]> on host 2317d0480f96
+[2025-06-01T23:36:15.446+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-06-01T23:36:19.939+0000] {job.py:229} INFO - Heartbeat recovered after 13.37 seconds
+[2025-06-01T23:36:20.575+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='log_monitoring_dag' AIRFLOW_CTX_TASK_ID='start_spark_consumer' AIRFLOW_CTX_EXECUTION_DATE='2025-06-01T23:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-01T23:00:00+00:00'
+[2025-06-01T23:36:20.577+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-06-01T23:36:20.597+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-06-01T23:36:20.599+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n            docker run --rm             --network realtime_log_monitoring_default             -v /opt/***/app:/app             bitnami/spark:3.3.0             spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.0 /app/log_consumer.py\n        ']
+[2025-06-01T23:36:20.610+0000] {subprocess.py:86} INFO - Output:
+[2025-06-01T23:37:48.744+0000] {job.py:229} INFO - Heartbeat recovered after 83.57 seconds
+[2025-06-01T23:37:54.618+0000] {job.py:229} INFO - Heartbeat recovered after 78.67 seconds
+[2025-06-01T23:38:24.092+0000] {job.py:229} INFO - Heartbeat recovered after 29.93 seconds
+[2025-06-01T23:40:07.885+0000] {job.py:229} INFO - Heartbeat recovered after 127.29 seconds
+[2025-06-01T23:40:19.803+0000] {job.py:229} INFO - Heartbeat recovered after 100.96 seconds
+[2025-06-01T23:41:09.230+0000] {job.py:229} INFO - Heartbeat recovered after 19.80 seconds
+[2025-06-01T23:41:20.467+0000] {job.py:229} INFO - Heartbeat recovered after 24.26 seconds
+[2025-06-01T23:44:06.253+0000] {subprocess.py:93} INFO - [38;5;6m [38;5;5m23:44:06.00 [0m
+[2025-06-01T23:44:06.288+0000] {subprocess.py:93} INFO - [38;5;6m [38;5;5m23:44:06.22 [0m[1mWelcome to the Bitnami spark container[0m
+[2025-06-01T23:44:06.290+0000] {subprocess.py:93} INFO - [38;5;6m [38;5;5m23:44:06.22 [0mSubscribe to project updates by watching [1mhttps://github.com/bitnami/containers[0m
+[2025-06-01T23:44:06.291+0000] {subprocess.py:93} INFO - [38;5;6m [38;5;5m23:44:06.22 [0mSubmit issues and feature requests at [1mhttps://github.com/bitnami/containers/issues[0m
+[2025-06-01T23:44:06.357+0000] {subprocess.py:93} INFO - [38;5;6m [38;5;5m23:44:06.23 [0m
+[2025-06-01T23:44:06.375+0000] {subprocess.py:93} INFO - 
+[2025-06-01T23:47:50.339+0000] {job.py:229} INFO - Heartbeat recovered after 78.00 seconds
+[2025-06-01T23:49:00.152+0000] {job.py:229} INFO - Heartbeat recovered after 58.35 seconds
+[2025-06-01T23:49:43.543+0000] {job.py:239} ERROR - Job heartbeat failed with error
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: could not translate host name "postgres" to address: Temporary failure in name resolution
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/jobs/job.py", line 207, in heartbeat
+    self._merge_from(Job._fetch_from_db(self, session))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/api_internal/internal_api_call.py", line 139, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/retries.py", line 93, in wrapped_function
+    for attempt in run_with_db_retries(max_retries=retries, logger=logger, **retry_kwargs):
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 443, in __iter__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 376, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 418, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 185, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/retries.py", line 102, in wrapped_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/jobs/job.py", line 335, in _fetch_from_db
+    session.merge(job)
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 3056, in merge
+    return self._merge(
+           ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 3136, in _merge
+    merged = self.get(
+             ^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2853, in get
+    return self._get_impl(
+           ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2975, in _get_impl
+    return db_load_fn(
+           ^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/loading.py", line 530, in load_on_pk_identity
+    session.execute(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+    return super(Engine, self).connect()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not translate host name "postgres" to address: Temporary failure in name resolution
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2025-06-01T23:51:31.486+0000] {job.py:254} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2025-06-01T23:51:37.406+0000] {job.py:229} INFO - Heartbeat recovered after 158.17 seconds
+[2025-06-01T23:54:11.423+0000] {job.py:229} INFO - Heartbeat recovered after 147.30 seconds
+[2025-06-01T23:54:22.470+0000] {job.py:229} INFO - Heartbeat recovered after 12.05 seconds
+[2025-06-01T23:54:34.320+0000] {job.py:229} INFO - Heartbeat recovered after 11.90 seconds
+[2025-06-01T23:55:46.821+0000] {job.py:229} INFO - Heartbeat recovered after 54.60 seconds
+[2025-06-01T23:56:17.122+0000] {job.py:229} INFO - Heartbeat recovered after 59.34 seconds
+[2025-06-01T23:56:22.548+0000] {job.py:229} INFO - Heartbeat recovered after 27.42 seconds
+[2025-06-01T23:56:46.055+0000] {job.py:229} INFO - Heartbeat recovered after 23.88 seconds
+[2025-06-01T23:56:56.050+0000] {job.py:229} INFO - Heartbeat recovered after 17.27 seconds
+[2025-06-01T23:57:14.290+0000] {job.py:229} INFO - Heartbeat recovered after 12.24 seconds
+[2025-06-01T23:57:24.999+0000] {job.py:229} INFO - Heartbeat recovered after 11.92 seconds
+[2025-06-01T23:57:21.035+0000] {subprocess.py:93} INFO - :: loading settings :: url = jar:file:/opt/bitnami/spark/jars/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2025-06-01T23:57:26.995+0000] {subprocess.py:93} INFO - Ivy Default Cache set to: /opt/bitnami/spark/.ivy2/cache
+[2025-06-01T23:57:28.826+0000] {subprocess.py:93} INFO - The jars for the packages stored in: /opt/bitnami/spark/.ivy2/jars
+[2025-06-01T23:57:29.418+0000] {subprocess.py:93} INFO - org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+[2025-06-01T23:57:30.263+0000] {subprocess.py:93} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-1d691a3d-824b-4118-9b97-8f7480030fa6;1.0
+[2025-06-01T23:57:31.622+0000] {subprocess.py:93} INFO - 	confs: [default]
+[2025-06-01T23:58:09.169+0000] {subprocess.py:93} INFO - You probably access the destination server through a proxy server that is not well configured.
+[2025-06-01T23:58:09.838+0000] {subprocess.py:93} INFO - You probably access the destination server through a proxy server that is not well configured.
+[2025-06-01T23:58:18.108+0000] {subprocess.py:93} INFO - You probably access the destination server through a proxy server that is not well configured.
+[2025-06-01T23:58:20.754+0000] {subprocess.py:93} INFO - You probably access the destination server through a proxy server that is not well configured.
+[2025-06-01T23:58:21.072+0000] {subprocess.py:93} INFO - :: resolution report :: resolve 53799ms :: artifacts dl 0ms
+[2025-06-01T23:58:21.141+0000] {subprocess.py:93} INFO - 	:: modules in use:
+[2025-06-01T23:58:21.471+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2025-06-01T23:58:21.486+0000] {subprocess.py:93} INFO - 	|                  |            modules            ||   artifacts   |
+[2025-06-01T23:58:21.500+0000] {subprocess.py:93} INFO - 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2025-06-01T23:58:22.603+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2025-06-01T23:58:22.748+0000] {subprocess.py:93} INFO - 	|      default     |   1   |   0   |   0   |   0   ||   0   |   0   |
+[2025-06-01T23:58:23.629+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2025-06-01T23:58:24.706+0000] {subprocess.py:93} INFO - 
+[2025-06-01T23:58:24.924+0000] {subprocess.py:93} INFO - :: problems summary ::
+[2025-06-01T23:58:25.935+0000] {subprocess.py:93} INFO - :::: WARNINGS
+[2025-06-01T23:58:27.451+0000] {subprocess.py:93} INFO - 	Host repo1.maven.org not found. url=https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.2.0/spark-sql-kafka-0-10_2.12-3.2.0.pom
+[2025-06-01T23:58:27.527+0000] {subprocess.py:93} INFO - 
+[2025-06-01T23:58:27.806+0000] {subprocess.py:93} INFO - 	Host repo1.maven.org not found. url=https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.2.0/spark-sql-kafka-0-10_2.12-3.2.0.jar
+[2025-06-01T23:58:28.479+0000] {subprocess.py:93} INFO - 
+[2025-06-01T23:58:28.738+0000] {subprocess.py:93} INFO - 	Host repos.spark-packages.org not found. url=https://repos.spark-packages.org/org/apache/spark/spark-sql-kafka-0-10_2.12/3.2.0/spark-sql-kafka-0-10_2.12-3.2.0.pom
+[2025-06-01T23:58:28.738+0000] {subprocess.py:93} INFO - 
+[2025-06-01T23:58:29.097+0000] {subprocess.py:93} INFO - 	Host repos.spark-packages.org not found. url=https://repos.spark-packages.org/org/apache/spark/spark-sql-kafka-0-10_2.12/3.2.0/spark-sql-kafka-0-10_2.12-3.2.0.jar
+[2025-06-01T23:58:29.253+0000] {subprocess.py:93} INFO - 
+[2025-06-01T23:58:29.254+0000] {subprocess.py:93} INFO - 		module not found: org.apache.spark#spark-sql-kafka-0-10_2.12;3.2.0
+[2025-06-01T23:58:29.391+0000] {subprocess.py:93} INFO - 
+[2025-06-01T23:58:29.392+0000] {subprocess.py:93} INFO - 	==== local-m2-cache: tried
+[2025-06-01T23:58:29.393+0000] {subprocess.py:93} INFO - 
+[2025-06-01T23:58:29.393+0000] {subprocess.py:93} INFO - 	  file:/opt/bitnami/spark/.m2/repository/org/apache/spark/spark-sql-kafka-0-10_2.12/3.2.0/spark-sql-kafka-0-10_2.12-3.2.0.pom
+[2025-06-01T23:58:29.394+0000] {subprocess.py:93} INFO - 
+[2025-06-01T23:58:29.394+0000] {subprocess.py:93} INFO - 	  -- artifact org.apache.spark#spark-sql-kafka-0-10_2.12;3.2.0!spark-sql-kafka-0-10_2.12.jar:
+[2025-06-01T23:58:29.395+0000] {subprocess.py:93} INFO - 
+[2025-06-01T23:58:29.410+0000] {subprocess.py:93} INFO - 	  file:/opt/bitnami/spark/.m2/repository/org/apache/spark/spark-sql-kafka-0-10_2.12/3.2.0/spark-sql-kafka-0-10_2.12-3.2.0.jar
+[2025-06-01T23:58:29.410+0000] {subprocess.py:93} INFO - 
+[2025-06-01T23:58:29.580+0000] {subprocess.py:93} INFO - 	==== local-ivy-cache: tried
+[2025-06-01T23:58:29.627+0000] {subprocess.py:93} INFO - 
+[2025-06-01T23:58:29.628+0000] {subprocess.py:93} INFO - 	  /opt/bitnami/spark/.ivy2/local/org.apache.spark/spark-sql-kafka-0-10_2.12/3.2.0/ivys/ivy.xml
+[2025-06-01T23:58:29.642+0000] {subprocess.py:93} INFO - 
+[2025-06-01T23:58:29.773+0000] {subprocess.py:93} INFO - 	  -- artifact org.apache.spark#spark-sql-kafka-0-10_2.12;3.2.0!spark-sql-kafka-0-10_2.12.jar:
+[2025-06-01T23:58:30.228+0000] {subprocess.py:93} INFO - 
+[2025-06-01T23:58:30.429+0000] {subprocess.py:93} INFO - 	  /opt/bitnami/spark/.ivy2/local/org.apache.spark/spark-sql-kafka-0-10_2.12/3.2.0/jars/spark-sql-kafka-0-10_2.12.jar
+[2025-06-01T23:58:30.430+0000] {subprocess.py:93} INFO - 
+[2025-06-01T23:58:30.430+0000] {subprocess.py:93} INFO - 	==== central: tried
+[2025-06-01T23:58:30.431+0000] {subprocess.py:93} INFO - 
+[2025-06-01T23:58:30.431+0000] {subprocess.py:93} INFO - 	  https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.2.0/spark-sql-kafka-0-10_2.12-3.2.0.pom
+[2025-06-01T23:58:30.449+0000] {subprocess.py:93} INFO - 
+[2025-06-01T23:58:30.449+0000] {subprocess.py:93} INFO - 	  -- artifact org.apache.spark#spark-sql-kafka-0-10_2.12;3.2.0!spark-sql-kafka-0-10_2.12.jar:
+[2025-06-01T23:58:30.450+0000] {subprocess.py:93} INFO - 
+[2025-06-01T23:58:30.450+0000] {subprocess.py:93} INFO - 	  https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.2.0/spark-sql-kafka-0-10_2.12-3.2.0.jar
+[2025-06-01T23:58:30.451+0000] {subprocess.py:93} INFO - 
+[2025-06-01T23:58:30.451+0000] {subprocess.py:93} INFO - 	==== spark-packages: tried
+[2025-06-01T23:58:30.451+0000] {subprocess.py:93} INFO - 
+[2025-06-01T23:58:30.452+0000] {subprocess.py:93} INFO - 	  https://repos.spark-packages.org/org/apache/spark/spark-sql-kafka-0-10_2.12/3.2.0/spark-sql-kafka-0-10_2.12-3.2.0.pom
+[2025-06-01T23:58:30.452+0000] {subprocess.py:93} INFO - 
+[2025-06-01T23:58:30.453+0000] {subprocess.py:93} INFO - 	  -- artifact org.apache.spark#spark-sql-kafka-0-10_2.12;3.2.0!spark-sql-kafka-0-10_2.12.jar:
+[2025-06-01T23:58:30.453+0000] {subprocess.py:93} INFO - 
+[2025-06-01T23:58:30.453+0000] {subprocess.py:93} INFO - 	  https://repos.spark-packages.org/org/apache/spark/spark-sql-kafka-0-10_2.12/3.2.0/spark-sql-kafka-0-10_2.12-3.2.0.jar
+[2025-06-01T23:58:30.454+0000] {subprocess.py:93} INFO - 
+[2025-06-01T23:58:30.454+0000] {subprocess.py:93} INFO - 		::::::::::::::::::::::::::::::::::::::::::::::
+[2025-06-01T23:58:30.454+0000] {subprocess.py:93} INFO - 
+[2025-06-01T23:58:30.455+0000] {subprocess.py:93} INFO - 		::          UNRESOLVED DEPENDENCIES         ::
+[2025-06-01T23:58:30.455+0000] {subprocess.py:93} INFO - 
+[2025-06-01T23:58:30.455+0000] {subprocess.py:93} INFO - 		::::::::::::::::::::::::::::::::::::::::::::::
+[2025-06-01T23:58:30.456+0000] {subprocess.py:93} INFO - 
+[2025-06-01T23:58:30.456+0000] {subprocess.py:93} INFO - 		:: org.apache.spark#spark-sql-kafka-0-10_2.12;3.2.0: not found
+[2025-06-01T23:58:30.456+0000] {subprocess.py:93} INFO - 
+[2025-06-01T23:58:30.457+0000] {subprocess.py:93} INFO - 		::::::::::::::::::::::::::::::::::::::::::::::
+[2025-06-01T23:58:30.457+0000] {subprocess.py:93} INFO - 
+[2025-06-01T23:58:30.457+0000] {subprocess.py:93} INFO - 
+[2025-06-01T23:58:30.458+0000] {subprocess.py:93} INFO - 
+[2025-06-01T23:58:30.458+0000] {subprocess.py:93} INFO - :: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
+[2025-06-01T23:58:30.458+0000] {subprocess.py:93} INFO - Exception in thread "main" java.lang.RuntimeException: [unresolved dependency: org.apache.spark#spark-sql-kafka-0-10_2.12;3.2.0: not found]
+[2025-06-01T23:58:30.459+0000] {subprocess.py:93} INFO - 	at org.apache.spark.deploy.SparkSubmitUtils$.resolveMavenCoordinates(SparkSubmit.scala:1456)
+[2025-06-01T23:58:30.459+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.DependencyUtils$.resolveMavenDependencies(DependencyUtils.scala:185)
+[2025-06-01T23:58:30.459+0000] {subprocess.py:93} INFO - 	at org.apache.spark.deploy.SparkSubmit.prepareSubmitEnvironment(SparkSubmit.scala:308)
+[2025-06-01T23:58:30.460+0000] {subprocess.py:93} INFO - 	at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:901)
+[2025-06-01T23:58:30.579+0000] {subprocess.py:93} INFO - 	at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:180)
+[2025-06-01T23:58:30.580+0000] {subprocess.py:93} INFO - 	at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:203)
+[2025-06-01T23:58:30.581+0000] {subprocess.py:93} INFO - 	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:90)
+[2025-06-01T23:58:30.727+0000] {subprocess.py:93} INFO - 	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1046)
+[2025-06-01T23:58:30.728+0000] {subprocess.py:93} INFO - 	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1055)
+[2025-06-01T23:58:30.729+0000] {subprocess.py:93} INFO - 	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+[2025-06-01T23:59:01.406+0000] {job.py:229} INFO - Heartbeat recovered after 10.94 seconds
+[2025-06-01T23:59:07.849+0000] {job.py:229} INFO - Heartbeat recovered after 12.29 seconds
+[2025-06-01T23:59:31.949+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-06-01T23:59:35.074+0000] {job.py:229} INFO - Heartbeat recovered after 10.67 seconds
+[2025-06-02T00:00:01.974+0000] {job.py:229} INFO - Heartbeat recovered after 26.94 seconds
+[2025-06-02T00:01:28.070+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 249, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-06-02T00:01:37.024+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=log_monitoring_dag, task_id=start_spark_consumer, run_id=scheduled__2025-06-01T23:00:00+00:00, execution_date=20250601T230000, start_date=20250601T233606, end_date=20250602T000133
+[2025-06-02T00:01:49.407+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-06-02T00:01:51.703+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 13 for task start_spark_consumer (Bash command failed. The command returned a non-zero exit code 1.; 415)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 249, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-06-02T00:01:56.257+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-06-02T00:01:58.936+0000] {standard_task_runner.py:217} INFO - Process not found (most likely exited), stop collecting metrics
+[2025-06-02T00:02:11.990+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,186 @@
+[2025-06-02T00:11:04.181+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-02T00:11:04.951+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: log_monitoring_dag.start_spark_consumer scheduled__2025-06-01T23:35:00+00:00 [queued]>
+[2025-06-02T00:11:04.965+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: log_monitoring_dag.start_spark_consumer scheduled__2025-06-01T23:35:00+00:00 [queued]>
+[2025-06-02T00:11:04.965+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 2
+[2025-06-02T00:11:05.080+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): start_spark_consumer> on 2025-06-01 23:35:00+00:00
+[2025-06-02T00:11:05.094+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=173) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-06-02T00:11:05.096+0000] {standard_task_runner.py:72} INFO - Started process 181 to run task
+[2025-06-02T00:11:05.095+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'log_monitoring_dag', 'start_spark_consumer', 'scheduled__2025-06-01T23:35:00+00:00', '--job-id', '33', '--raw', '--subdir', 'DAGS_FOLDER/log_monitoring_dag.py', '--cfg-path', '/tmp/tmpzujqdn5e']
+[2025-06-02T00:11:05.100+0000] {standard_task_runner.py:105} INFO - Job 33: Subtask start_spark_consumer
+[2025-06-02T00:11:05.152+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-06-02T00:11:05.202+0000] {task_command.py:467} INFO - Running <TaskInstance: log_monitoring_dag.start_spark_consumer scheduled__2025-06-01T23:35:00+00:00 [running]> on host 81b8dfdf3580
+[2025-06-02T00:11:05.204+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-06-02T00:11:05.376+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='log_monitoring_dag' AIRFLOW_CTX_TASK_ID='start_spark_consumer' AIRFLOW_CTX_EXECUTION_DATE='2025-06-01T23:35:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-01T23:35:00+00:00'
+[2025-06-02T00:11:05.381+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-06-02T00:11:05.508+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-06-02T00:11:05.510+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n            docker run --rm             --network realtime_log_monitoring_default             -v /opt/***/app:/app             bitnami/spark:3.3.0             spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.0 /app/log_consumer.py\n        ']
+[2025-06-02T00:11:05.529+0000] {subprocess.py:86} INFO - Output:
+[2025-06-02T00:12:46.559+0000] {job.py:229} INFO - Heartbeat recovered after 11.39 seconds
+[2025-06-02T00:15:24.888+0000] {subprocess.py:93} INFO - [38;5;6m [38;5;5m00:15:24.52 [0m
+[2025-06-02T00:15:24.904+0000] {subprocess.py:93} INFO - [38;5;6m [38;5;5m00:15:24.88 [0m[1mWelcome to the Bitnami spark container[0m
+[2025-06-02T00:15:24.905+0000] {subprocess.py:93} INFO - [38;5;6m [38;5;5m00:15:24.88 [0mSubscribe to project updates by watching [1mhttps://github.com/bitnami/containers[0m
+[2025-06-02T00:15:24.906+0000] {subprocess.py:93} INFO - [38;5;6m [38;5;5m00:15:24.88 [0mSubmit issues and feature requests at [1mhttps://github.com/bitnami/containers/issues[0m
+[2025-06-02T00:15:24.907+0000] {subprocess.py:93} INFO - [38;5;6m [38;5;5m00:15:24.88 [0m
+[2025-06-02T00:15:25.153+0000] {subprocess.py:93} INFO - 
+[2025-06-02T00:17:08.980+0000] {subprocess.py:93} INFO - :: loading settings :: url = jar:file:/opt/bitnami/spark/jars/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2025-06-02T00:17:10.286+0000] {subprocess.py:93} INFO - Ivy Default Cache set to: /opt/bitnami/spark/.ivy2/cache
+[2025-06-02T00:17:10.287+0000] {subprocess.py:93} INFO - The jars for the packages stored in: /opt/bitnami/spark/.ivy2/jars
+[2025-06-02T00:17:10.592+0000] {subprocess.py:93} INFO - org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+[2025-06-02T00:17:10.660+0000] {subprocess.py:93} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-bf5bb45d-a44d-46dc-b261-3a314e27b3af;1.0
+[2025-06-02T00:17:10.661+0000] {subprocess.py:93} INFO - 	confs: [default]
+[2025-06-02T00:17:37.181+0000] {subprocess.py:93} INFO - 	found org.apache.spark#spark-sql-kafka-0-10_2.12;3.2.0 in central
+[2025-06-02T00:17:43.996+0000] {subprocess.py:93} INFO - 	found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.2.0 in central
+[2025-06-02T00:17:44.588+0000] {subprocess.py:93} INFO - 	found org.apache.kafka#kafka-clients;2.8.0 in central
+[2025-06-02T00:17:44.890+0000] {subprocess.py:93} INFO - 	found org.lz4#lz4-java;1.7.1 in central
+[2025-06-02T00:17:45.331+0000] {subprocess.py:93} INFO - 	found org.xerial.snappy#snappy-java;1.1.8.4 in central
+[2025-06-02T00:17:46.942+0000] {subprocess.py:93} INFO - 	found org.slf4j#slf4j-api;1.7.30 in central
+[2025-06-02T00:17:49.539+0000] {subprocess.py:93} INFO - 	found org.apache.hadoop#hadoop-client-runtime;3.3.1 in central
+[2025-06-02T00:17:50.526+0000] {subprocess.py:93} INFO - 	found org.spark-project.spark#unused;1.0.0 in central
+[2025-06-02T00:17:50.910+0000] {subprocess.py:93} INFO - 	found org.apache.hadoop#hadoop-client-api;3.3.1 in central
+[2025-06-02T00:17:53.594+0000] {subprocess.py:93} INFO - 	found org.apache.htrace#htrace-core4;4.1.0-incubating in central
+[2025-06-02T00:17:57.377+0000] {subprocess.py:93} INFO - 	found commons-logging#commons-logging;1.1.3 in central
+[2025-06-02T00:17:57.684+0000] {subprocess.py:93} INFO - 	found com.google.code.findbugs#jsr305;3.0.0 in central
+[2025-06-02T00:18:00.301+0000] {subprocess.py:93} INFO - 	found org.apache.commons#commons-pool2;2.6.2 in central
+[2025-06-02T00:18:00.459+0000] {subprocess.py:93} INFO - downloading https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.2.0/spark-sql-kafka-0-10_2.12-3.2.0.jar ...
+[2025-06-02T00:18:01.540+0000] {subprocess.py:93} INFO - 	[SUCCESSFUL ] org.apache.spark#spark-sql-kafka-0-10_2.12;3.2.0!spark-sql-kafka-0-10_2.12.jar (1224ms)
+[2025-06-02T00:18:01.682+0000] {subprocess.py:93} INFO - downloading https://repo1.maven.org/maven2/org/apache/spark/spark-token-provider-kafka-0-10_2.12/3.2.0/spark-token-provider-kafka-0-10_2.12-3.2.0.jar ...
+[2025-06-02T00:18:03.158+0000] {subprocess.py:93} INFO - 	[SUCCESSFUL ] org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.2.0!spark-token-provider-kafka-0-10_2.12.jar (1614ms)
+[2025-06-02T00:18:03.344+0000] {subprocess.py:93} INFO - downloading https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/2.8.0/kafka-clients-2.8.0.jar ...
+[2025-06-02T00:18:12.697+0000] {job.py:229} INFO - Heartbeat recovered after 10.97 seconds
+[2025-06-02T00:18:24.766+0000] {job.py:229} INFO - Heartbeat recovered after 12.42 seconds
+[2025-06-02T00:18:40.496+0000] {job.py:229} INFO - Heartbeat recovered after 15.87 seconds
+[2025-06-02T00:18:52.061+0000] {subprocess.py:93} INFO - 	[SUCCESSFUL ] org.apache.kafka#kafka-clients;2.8.0!kafka-clients.jar (48871ms)
+[2025-06-02T00:18:52.879+0000] {subprocess.py:93} INFO - downloading https://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.0/jsr305-3.0.0.jar ...
+[2025-06-02T00:18:53.345+0000] {subprocess.py:93} INFO - 	[SUCCESSFUL ] com.google.code.findbugs#jsr305;3.0.0!jsr305.jar (602ms)
+[2025-06-02T00:18:53.482+0000] {subprocess.py:93} INFO - downloading https://repo1.maven.org/maven2/org/apache/commons/commons-pool2/2.6.2/commons-pool2-2.6.2.jar ...
+[2025-06-02T00:18:54.901+0000] {subprocess.py:93} INFO - 	[SUCCESSFUL ] org.apache.commons#commons-pool2;2.6.2!commons-pool2.jar (1560ms)
+[2025-06-02T00:18:55.328+0000] {subprocess.py:93} INFO - downloading https://repo1.maven.org/maven2/org/spark-project/spark/unused/1.0.0/unused-1.0.0.jar ...
+[2025-06-02T00:18:56.423+0000] {subprocess.py:93} INFO - 	[SUCCESSFUL ] org.spark-project.spark#unused;1.0.0!unused.jar (1238ms)
+[2025-06-02T00:18:59.604+0000] {subprocess.py:93} INFO - downloading https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-client-runtime/3.3.1/hadoop-client-runtime-3.3.1.jar ...
+[2025-06-02T00:19:01.135+0000] {job.py:229} INFO - Heartbeat recovered after 12.72 seconds
+[2025-06-02T00:19:12.916+0000] {job.py:229} INFO - Heartbeat recovered after 12.16 seconds
+[2025-06-02T00:19:23.472+0000] {job.py:229} INFO - Heartbeat recovered after 10.56 seconds
+[2025-06-02T00:19:47.161+0000] {job.py:229} INFO - Heartbeat recovered after 23.70 seconds
+[2025-06-02T00:19:57.687+0000] {job.py:229} INFO - Heartbeat recovered after 18.54 seconds
+[2025-06-02T00:20:12.285+0000] {subprocess.py:93} INFO - 	[SUCCESSFUL ] org.apache.hadoop#hadoop-client-runtime;3.3.1!hadoop-client-runtime.jar (75816ms)
+[2025-06-02T00:20:12.560+0000] {subprocess.py:93} INFO - downloading https://repo1.maven.org/maven2/org/lz4/lz4-java/1.7.1/lz4-java-1.7.1.jar ...
+[2025-06-02T00:20:17.686+0000] {subprocess.py:93} INFO - 	[SUCCESSFUL ] org.lz4#lz4-java;1.7.1!lz4-java.jar (5446ms)
+[2025-06-02T00:20:17.830+0000] {subprocess.py:93} INFO - downloading https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.8.4/snappy-java-1.1.8.4.jar ...
+[2025-06-02T00:20:35.074+0000] {subprocess.py:93} INFO - 	[SUCCESSFUL ] org.xerial.snappy#snappy-java;1.1.8.4!snappy-java.jar(bundle) (17343ms)
+[2025-06-02T00:20:35.265+0000] {job.py:229} INFO - Heartbeat recovered after 10.66 seconds
+[2025-06-02T00:20:35.732+0000] {subprocess.py:93} INFO - downloading https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar ...
+[2025-06-02T00:20:36.097+0000] {subprocess.py:93} INFO - 	[SUCCESSFUL ] org.slf4j#slf4j-api;1.7.30!slf4j-api.jar (995ms)
+[2025-06-02T00:20:36.500+0000] {subprocess.py:93} INFO - downloading https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-client-api/3.3.1/hadoop-client-api-3.3.1.jar ...
+[2025-06-02T00:21:05.642+0000] {job.py:229} INFO - Heartbeat recovered after 15.90 seconds
+[2025-06-02T00:21:10.779+0000] {subprocess.py:93} INFO - 	[SUCCESSFUL ] org.apache.hadoop#hadoop-client-api;3.3.1!hadoop-client-api.jar (34477ms)
+[2025-06-02T00:21:11.157+0000] {subprocess.py:93} INFO - downloading https://repo1.maven.org/maven2/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.jar ...
+[2025-06-02T00:21:14.393+0000] {job.py:229} INFO - Heartbeat recovered after 11.34 seconds
+[2025-06-02T00:21:16.377+0000] {subprocess.py:93} INFO - 	[SUCCESSFUL ] org.apache.htrace#htrace-core4;4.1.0-incubating!htrace-core4.jar (3438ms)
+[2025-06-02T00:21:16.577+0000] {subprocess.py:93} INFO - downloading https://repo1.maven.org/maven2/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar ...
+[2025-06-02T00:21:17.023+0000] {subprocess.py:93} INFO - 	[SUCCESSFUL ] commons-logging#commons-logging;1.1.3!commons-logging.jar (2631ms)
+[2025-06-02T00:21:17.054+0000] {subprocess.py:93} INFO - :: resolution report :: resolve 50024ms :: artifacts dl 196707ms
+[2025-06-02T00:21:17.055+0000] {subprocess.py:93} INFO - 	:: modules in use:
+[2025-06-02T00:21:17.055+0000] {subprocess.py:93} INFO - 	com.google.code.findbugs#jsr305;3.0.0 from central in [default]
+[2025-06-02T00:21:17.056+0000] {subprocess.py:93} INFO - 	commons-logging#commons-logging;1.1.3 from central in [default]
+[2025-06-02T00:21:17.056+0000] {subprocess.py:93} INFO - 	org.apache.commons#commons-pool2;2.6.2 from central in [default]
+[2025-06-02T00:21:17.057+0000] {subprocess.py:93} INFO - 	org.apache.hadoop#hadoop-client-api;3.3.1 from central in [default]
+[2025-06-02T00:21:17.057+0000] {subprocess.py:93} INFO - 	org.apache.hadoop#hadoop-client-runtime;3.3.1 from central in [default]
+[2025-06-02T00:21:17.057+0000] {subprocess.py:93} INFO - 	org.apache.htrace#htrace-core4;4.1.0-incubating from central in [default]
+[2025-06-02T00:21:17.058+0000] {subprocess.py:93} INFO - 	org.apache.kafka#kafka-clients;2.8.0 from central in [default]
+[2025-06-02T00:21:17.058+0000] {subprocess.py:93} INFO - 	org.apache.spark#spark-sql-kafka-0-10_2.12;3.2.0 from central in [default]
+[2025-06-02T00:21:17.058+0000] {subprocess.py:93} INFO - 	org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.2.0 from central in [default]
+[2025-06-02T00:21:17.059+0000] {subprocess.py:93} INFO - 	org.lz4#lz4-java;1.7.1 from central in [default]
+[2025-06-02T00:21:17.059+0000] {subprocess.py:93} INFO - 	org.slf4j#slf4j-api;1.7.30 from central in [default]
+[2025-06-02T00:21:17.059+0000] {subprocess.py:93} INFO - 	org.spark-project.spark#unused;1.0.0 from central in [default]
+[2025-06-02T00:21:17.060+0000] {subprocess.py:93} INFO - 	org.xerial.snappy#snappy-java;1.1.8.4 from central in [default]
+[2025-06-02T00:21:17.060+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2025-06-02T00:21:17.060+0000] {subprocess.py:93} INFO - 	|                  |            modules            ||   artifacts   |
+[2025-06-02T00:21:17.060+0000] {subprocess.py:93} INFO - 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2025-06-02T00:21:17.405+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2025-06-02T00:21:17.415+0000] {subprocess.py:93} INFO - 	|      default     |   13  |   13  |   13  |   0   ||   13  |   13  |
+[2025-06-02T00:21:17.416+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2025-06-02T00:21:18.068+0000] {subprocess.py:93} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-bf5bb45d-a44d-46dc-b261-3a314e27b3af
+[2025-06-02T00:21:18.069+0000] {subprocess.py:93} INFO - 	confs: [default]
+[2025-06-02T00:21:40.804+0000] {job.py:229} INFO - Heartbeat recovered after 14.82 seconds
+[2025-06-02T00:22:08.340+0000] {job.py:229} INFO - Heartbeat recovered after 19.91 seconds
+[2025-06-02T00:22:17.696+0000] {job.py:229} INFO - Heartbeat recovered after 12.11 seconds
+[2025-06-02T00:22:22.061+0000] {subprocess.py:93} INFO - 	13 artifacts copied, 0 already retrieved (59181kB/63942ms)
+[2025-06-02T00:22:33.801+0000] {job.py:229} INFO - Heartbeat recovered after 16.11 seconds
+[2025-06-02T00:22:51.479+0000] {job.py:229} INFO - Heartbeat recovered after 22.79 seconds
+[2025-06-02T00:22:58.034+0000] {subprocess.py:93} INFO - 25/06/02 00:22:58 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-06-02T00:23:14.381+0000] {subprocess.py:93} INFO - python3: can't open file '/app/log_consumer.py': [Errno 2] No such file or directory
+[2025-06-02T00:23:14.797+0000] {subprocess.py:93} INFO - 25/06/02 00:23:14 INFO ShutdownHookManager: Shutdown hook called
+[2025-06-02T00:23:15.008+0000] {subprocess.py:93} INFO - 25/06/02 00:23:14 INFO ShutdownHookManager: Deleting directory /tmp/spark-3a922112-7c93-490b-a4b8-4ce35654ce36
+[2025-06-02T00:24:43.704+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2025-06-02T00:25:15.405+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 249, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2025-06-02T00:25:16.691+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=log_monitoring_dag, task_id=start_spark_consumer, run_id=scheduled__2025-06-01T23:35:00+00:00, execution_date=20250601T233500, start_date=20250602T001104, end_date=20250602T002516
+[2025-06-02T00:25:19.622+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-06-02T00:25:19.867+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 33 for task start_spark_consumer (Bash command failed. The command returned a non-zero exit code 2.; 181)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 249, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2025-06-02T00:25:20.446+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-06-02T00:25:23.889+0000] {standard_task_runner.py:217} INFO - Process not found (most likely exited), stop collecting metrics
+[2025-06-02T00:25:28.015+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-02T00:25:28.021+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

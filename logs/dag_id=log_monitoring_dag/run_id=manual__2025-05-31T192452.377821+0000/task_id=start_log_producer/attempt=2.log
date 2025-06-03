@@ -1,0 +1,116 @@
+[2025-05-31T23:03:01.618+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-05-31T23:03:26.741+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: log_monitoring_dag.start_log_producer manual__2025-05-31T19:24:52.377821+00:00 [queued]>
+[2025-05-31T23:03:31.804+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: log_monitoring_dag.start_log_producer manual__2025-05-31T19:24:52.377821+00:00 [queued]>
+[2025-05-31T23:03:32.347+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 2
+[2025-05-31T23:03:35.025+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): start_log_producer> on 2025-05-31 19:24:52.377821+00:00
+[2025-05-31T23:04:04.673+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'log_monitoring_dag', 'start_log_producer', 'manual__2025-05-31T19:24:52.377821+00:00', '--job-id', '55', '--raw', '--subdir', 'DAGS_FOLDER/log_monitoring_dag.py', '--cfg-path', '/tmp/tmphtci96zw']
+[2025-05-31T23:04:04.937+0000] {standard_task_runner.py:105} INFO - Job 55: Subtask start_log_producer
+[2025-05-31T23:04:13.857+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=1141) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-05-31T23:04:16.073+0000] {standard_task_runner.py:72} INFO - Started process 1183 to run task
+[2025-05-31T23:05:35.206+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-05-31T23:06:20.984+0000] {job.py:229} INFO - Heartbeat recovered after 256.54 seconds
+[2025-05-31T23:06:56.277+0000] {job.py:229} INFO - Heartbeat recovered after 38.62 seconds
+[2025-05-31T23:07:07.267+0000] {task_command.py:467} INFO - Running <TaskInstance: log_monitoring_dag.start_log_producer manual__2025-05-31T19:24:52.377821+00:00 [running]> on host fcc5407a0544
+[2025-05-31T23:07:25.173+0000] {job.py:229} INFO - Heartbeat recovered after 30.56 seconds
+[2025-05-31T23:07:55.465+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='log_monitoring_dag' AIRFLOW_CTX_TASK_ID='start_log_producer' AIRFLOW_CTX_EXECUTION_DATE='2025-05-31T19:24:52.377821+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-31T19:24:52.377821+00:00'
+[2025-05-31T23:07:55.668+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-05-31T23:08:06.636+0000] {job.py:229} INFO - Heartbeat recovered after 41.82 seconds
+[2025-05-31T23:08:35.438+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-05-31T23:08:48.246+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/app && python -u log_producer.py']
+[2025-05-31T23:08:53.616+0000] {job.py:229} INFO - Heartbeat recovered after 47.85 seconds
+[2025-05-31T23:09:08.526+0000] {subprocess.py:86} INFO - Output:
+[2025-05-31T23:09:35.285+0000] {job.py:229} INFO - Heartbeat recovered after 44.13 seconds
+[2025-05-31T23:09:48.384+0000] {job.py:229} INFO - Heartbeat recovered after 13.74 seconds
+[2025-05-31T23:10:13.992+0000] {job.py:229} INFO - Heartbeat recovered after 19.68 seconds
+[2025-05-31T23:10:47.320+0000] {job.py:229} INFO - Heartbeat recovered after 33.89 seconds
+[2025-05-31T23:11:31.912+0000] {job.py:229} INFO - Heartbeat recovered after 35.14 seconds
+[2025-05-31T23:11:43.467+0000] {job.py:229} INFO - Heartbeat recovered after 13.95 seconds
+[2025-05-31T23:11:56.398+0000] {job.py:229} INFO - Heartbeat recovered after 13.12 seconds
+[2025-05-31T23:12:17.295+0000] {job.py:229} INFO - Heartbeat recovered after 13.77 seconds
+[2025-05-31T23:12:31.671+0000] {job.py:229} INFO - Heartbeat recovered after 16.34 seconds
+[2025-05-31T23:12:40.321+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-05-31T23:12:40.418+0000] {subprocess.py:93} INFO -   File "/opt/***/app/log_producer.py", line 7, in <module>
+[2025-05-31T23:12:40.428+0000] {subprocess.py:93} INFO -     producer = KafkaProducer(
+[2025-05-31T23:12:40.430+0000] {subprocess.py:93} INFO -                ^^^^^^^^^^^^^^
+[2025-05-31T23:12:40.430+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/kafka/producer/kafka.py", line 481, in __init__
+[2025-05-31T23:12:40.721+0000] {subprocess.py:93} INFO -     client = self.config['kafka_client'](
+[2025-05-31T23:12:40.949+0000] {subprocess.py:93} INFO -              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-05-31T23:12:41.358+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/kafka/client_async.py", line 262, in __init__
+[2025-05-31T23:12:41.420+0000] {subprocess.py:93} INFO -     self.config['api_version'] = self.check_version()
+[2025-05-31T23:12:41.423+0000] {subprocess.py:93} INFO -                                  ^^^^^^^^^^^^^^^^^^^^
+[2025-05-31T23:12:41.459+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/kafka/client_async.py", line 1074, in check_version
+[2025-05-31T23:12:41.509+0000] {subprocess.py:93} INFO -     raise Errors.NoBrokersAvailable()
+[2025-05-31T23:12:41.551+0000] {subprocess.py:93} INFO - kafka.errors.NoBrokersAvailable: NoBrokersAvailable
+[2025-05-31T23:12:41.670+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-05-31T23:12:42.951+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 249, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-05-31T23:12:46.819+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=log_monitoring_dag, task_id=start_log_producer, run_id=manual__2025-05-31T19:24:52.377821+00:00, execution_date=20250531T192452, start_date=20250531T230327, end_date=20250531T231245
+[2025-05-31T23:12:56.771+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-05-31T23:12:57.525+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 55 for task start_log_producer (Bash command failed. The command returned a non-zero exit code 1.; 1183)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 249, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-05-31T23:12:58.472+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-05-31T23:13:01.950+0000] {standard_task_runner.py:217} INFO - Process not found (most likely exited), stop collecting metrics
+[2025-05-31T23:13:08.793+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-31T23:13:10.882+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

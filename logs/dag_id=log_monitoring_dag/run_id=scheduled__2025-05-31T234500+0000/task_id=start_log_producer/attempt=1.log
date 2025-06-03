@@ -1,0 +1,143 @@
+[2025-05-31T23:51:12.043+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-05-31T23:51:12.558+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: log_monitoring_dag.start_log_producer scheduled__2025-05-31T23:45:00+00:00 [queued]>
+[2025-05-31T23:51:12.616+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: log_monitoring_dag.start_log_producer scheduled__2025-05-31T23:45:00+00:00 [queued]>
+[2025-05-31T23:51:12.690+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-05-31T23:51:13.258+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): start_log_producer> on 2025-05-31 23:45:00+00:00
+[2025-05-31T23:51:14.176+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'log_monitoring_dag', 'start_log_producer', 'scheduled__2025-05-31T23:45:00+00:00', '--job-id', '79', '--raw', '--subdir', 'DAGS_FOLDER/log_monitoring_dag.py', '--cfg-path', '/tmp/tmptoh4ammz']
+[2025-05-31T23:51:15.634+0000] {standard_task_runner.py:105} INFO - Job 79: Subtask start_log_producer
+[2025-05-31T23:51:15.903+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=254) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-05-31T23:51:15.919+0000] {standard_task_runner.py:72} INFO - Started process 261 to run task
+[2025-05-31T23:51:27.327+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-05-31T23:52:15.437+0000] {job.py:229} INFO - Heartbeat recovered after 69.44 seconds
+[2025-05-31T23:52:15.518+0000] {task_command.py:467} INFO - Running <TaskInstance: log_monitoring_dag.start_log_producer scheduled__2025-05-31T23:45:00+00:00 [running]> on host 4f4c6676a48d
+[2025-05-31T23:52:15.520+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-05-31T23:52:16.084+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='log_monitoring_dag' AIRFLOW_CTX_TASK_ID='start_log_producer' AIRFLOW_CTX_EXECUTION_DATE='2025-05-31T23:45:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-31T23:45:00+00:00'
+[2025-05-31T23:52:16.087+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-05-31T23:52:16.120+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-05-31T23:52:16.171+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/app && python -u log_producer.py']
+[2025-05-31T23:52:16.186+0000] {subprocess.py:86} INFO - Output:
+[2025-05-31T23:52:18.646+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:18.536508', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:52:19.650+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:19.649200', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:52:20.495+0000] {job.py:229} INFO - Heartbeat recovered after 49.31 seconds
+[2025-05-31T23:52:20.652+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:20.652050', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:52:21.655+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:21.654641', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:52:22.657+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:22.657531', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:52:23.665+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:23.664942', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:52:24.668+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:24.667926', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:52:25.671+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:25.670760', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:52:26.676+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:26.675600', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:52:27.680+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:27.679307', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:52:28.682+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:28.682396', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:52:29.685+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:29.684576', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:52:30.687+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:30.687329', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:52:31.690+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:31.689557', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:52:32.695+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:32.694480', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:52:33.697+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:33.697069', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:52:34.818+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:34.817485', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:52:35.820+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:35.820154', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:52:36.822+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:36.822202', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:52:38.064+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:38.063347', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:52:39.066+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:39.066080', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:52:40.069+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:40.068791', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:52:41.071+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:41.071332', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:52:42.075+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:42.073785', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:52:43.077+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:43.076392', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:52:44.079+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:44.078848', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:52:45.306+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:45.306155', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:52:46.308+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:46.308612', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:52:47.311+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:47.311049', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:52:48.442+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:48.441178', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:52:49.444+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:49.444128', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:52:50.447+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:50.446794', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:52:51.450+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:51.450081', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:52:52.503+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:52.503132', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:52:53.506+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:53.505736', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:52:54.509+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:54.508622', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:52:55.629+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:55.628891', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:52:56.631+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:56.631222', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:52:57.634+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:57.633155', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:52:58.637+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:58.636160', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:52:59.639+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:52:59.638874', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:53:00.641+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:00.640882', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:53:01.756+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:01.756073', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:53:02.761+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:02.758897', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:53:03.767+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:03.764067', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:53:04.773+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:04.772289', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:53:05.775+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:05.775563', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:53:06.780+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:06.779749', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:53:07.782+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:07.782362', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:53:08.785+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:08.784911', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:53:09.788+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:09.788042', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:53:10.794+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:10.790451', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:53:11.801+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:11.797870', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:53:12.809+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:12.808091', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:53:13.817+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:13.816463', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:53:14.827+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:14.824807', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:53:15.832+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:15.831143', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:53:16.833+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:16.833541', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:53:17.836+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:17.835800', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:53:18.838+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:18.838228', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:53:19.841+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:19.840725', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:53:20.843+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:20.843285', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:53:21.847+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:21.847166', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:53:22.851+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:22.849324', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:53:23.856+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:23.855729', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:53:24.859+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:24.858737', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:53:25.862+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:25.861866', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:53:26.865+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:26.864501', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:53:27.869+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:27.869463', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:53:28.872+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:28.872559', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:53:29.875+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:29.874923', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:53:30.880+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:30.880195', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:53:31.883+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:31.882991', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:53:32.888+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:32.887939', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:53:33.973+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:33.972901', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:53:34.976+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:34.976029', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:53:35.980+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:35.980129', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:53:36.984+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:36.982738', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:53:37.993+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:37.991467', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:53:38.997+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:38.996663', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:53:40.000+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:39.999177', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:53:41.002+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:41.001790', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:53:42.004+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:42.004463', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:53:43.008+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:43.007269', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:53:44.010+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:44.010076', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:53:45.014+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:45.013485', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:53:46.016+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:46.016634', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:53:47.019+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:47.019518', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:53:48.024+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:48.021974', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:53:49.032+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:49.032128', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:53:50.038+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:50.034569', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:53:51.045+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:51.044738', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:53:52.047+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:52.047165', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:53:53.082+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:53.081672', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:53:54.085+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:54.084195', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:53:55.089+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:55.088569', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:53:56.092+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:56.091420', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:53:57.095+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:57.095162', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:53:58.098+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:58.097637', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:53:59.101+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:53:59.100907', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:54:00.120+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:54:00.120623', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:54:01.125+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:54:01.123160', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:54:02.128+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:54:02.127384', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:54:03.131+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:54:03.131026', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:54:04.134+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:54:04.133298', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:54:05.136+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:54:05.136172', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:54:06.139+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:54:06.139053', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:54:07.141+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:54:07.141321', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:54:08.145+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:54:08.144801', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:54:09.176+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:54:09.175956', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:54:10.658+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:54:10.658019', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:54:11.850+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:54:11.849842', 'level': 'WARNING', 'message': 'This is a log message'}
+[2025-05-31T23:54:12.853+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:54:12.852753', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:54:13.857+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:54:13.855798', 'level': 'ERROR', 'message': 'This is a log message'}
+[2025-05-31T23:54:14.859+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:54:14.859246', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:54:15.864+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:54:15.864325', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:54:16.870+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:54:16.869518', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:54:17.872+0000] {subprocess.py:93} INFO - Sent log: {'timestamp': '2025-05-31T23:54:17.872260', 'level': 'INFO', 'message': 'This is a log message'}
+[2025-05-31T23:54:19.114+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-05-31T23:54:19.195+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-05-31T23:54:19.196+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=log_monitoring_dag, task_id=start_log_producer, run_id=scheduled__2025-05-31T23:45:00+00:00, execution_date=20250531T234500, start_date=20250531T235112, end_date=20250531T235419
+[2025-05-31T23:54:19.239+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-05-31T23:54:19.334+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-31T23:54:19.340+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

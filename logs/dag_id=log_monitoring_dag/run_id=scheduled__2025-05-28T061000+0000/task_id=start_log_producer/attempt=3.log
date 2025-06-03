@@ -1,0 +1,98 @@
+[2025-05-31T14:35:29.764+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-05-31T14:35:29.791+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: log_monitoring_dag.start_log_producer scheduled__2025-05-28T06:10:00+00:00 [queued]>
+[2025-05-31T14:35:29.803+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: log_monitoring_dag.start_log_producer scheduled__2025-05-28T06:10:00+00:00 [queued]>
+[2025-05-31T14:35:29.805+0000] {taskinstance.py:2865} INFO - Starting attempt 3 of 2
+[2025-05-31T14:35:29.828+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): start_log_producer> on 2025-05-28 06:10:00+00:00
+[2025-05-31T14:35:29.841+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=184) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-05-31T14:35:29.846+0000] {standard_task_runner.py:72} INFO - Started process 202 to run task
+[2025-05-31T14:35:29.840+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'log_monitoring_dag', 'start_log_producer', 'scheduled__2025-05-28T06:10:00+00:00', '--job-id', '141', '--raw', '--subdir', 'DAGS_FOLDER/log_monitoring_dag.py', '--cfg-path', '/tmp/tmpodqmrups']
+[2025-05-31T14:35:29.848+0000] {standard_task_runner.py:105} INFO - Job 141: Subtask start_log_producer
+[2025-05-31T14:35:29.877+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-05-31T14:35:29.946+0000] {task_command.py:467} INFO - Running <TaskInstance: log_monitoring_dag.start_log_producer scheduled__2025-05-28T06:10:00+00:00 [running]> on host 1d31c4e9dbe9
+[2025-05-31T14:35:29.948+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-05-31T14:35:30.173+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='log_monitoring_dag' AIRFLOW_CTX_TASK_ID='start_log_producer' AIRFLOW_CTX_EXECUTION_DATE='2025-05-28T06:10:00+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-28T06:10:00+00:00'
+[2025-05-31T14:35:30.177+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-05-31T14:35:30.212+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-05-31T14:35:30.215+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/app && python -u log_producer.py']
+[2025-05-31T14:35:30.232+0000] {subprocess.py:86} INFO - Output:
+[2025-05-31T14:35:32.584+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:35:32', 'level': 'INFO', 'message': 'Page loaded'}
+[2025-05-31T14:35:35.982+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:35:35', 'level': 'WARNING', 'message': 'Slow response time'}
+[2025-05-31T14:35:38.289+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:35:38', 'level': 'ERROR', 'message': 'Payment gateway timeout'}
+[2025-05-31T14:35:40.461+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:35:40', 'level': 'INFO', 'message': 'Search executed'}
+[2025-05-31T14:35:42.467+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:35:42', 'level': 'INFO', 'message': 'User logged in'}
+[2025-05-31T14:35:44.477+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:35:44', 'level': 'WARNING', 'message': 'High memory usage'}
+[2025-05-31T14:35:46.809+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:35:46', 'level': 'WARNING', 'message': 'High memory usage'}
+[2025-05-31T14:35:48.823+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:35:48', 'level': 'ERROR', 'message': 'Payment gateway timeout'}
+[2025-05-31T14:35:50.910+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:35:50', 'level': 'INFO', 'message': 'User logged in'}
+[2025-05-31T14:35:53.338+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:35:53', 'level': 'WARNING', 'message': 'High memory usage'}
+[2025-05-31T14:35:56.109+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:35:56', 'level': 'INFO', 'message': 'User logged in'}
+[2025-05-31T14:35:58.144+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:35:58', 'level': 'INFO', 'message': 'Page loaded'}
+[2025-05-31T14:36:00.355+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:36:00', 'level': 'WARNING', 'message': 'Slow response time'}
+[2025-05-31T14:36:02.686+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:36:02', 'level': 'ERROR', 'message': 'Payment gateway timeout'}
+[2025-05-31T14:36:04.894+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:36:04', 'level': 'INFO', 'message': 'Search executed'}
+[2025-05-31T14:36:08.110+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:36:08', 'level': 'INFO', 'message': 'Page loaded'}
+[2025-05-31T14:36:10.127+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:36:10', 'level': 'WARNING', 'message': 'High memory usage'}
+[2025-05-31T14:36:12.130+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:36:12', 'level': 'ERROR', 'message': 'Database connection failed'}
+[2025-05-31T14:36:14.138+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:36:14', 'level': 'ERROR', 'message': 'Database connection failed'}
+[2025-05-31T14:36:16.864+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:36:16', 'level': 'ERROR', 'message': 'Payment gateway timeout'}
+[2025-05-31T14:36:19.732+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:36:19', 'level': 'WARNING', 'message': 'Slow response time'}
+[2025-05-31T14:36:21.699+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:36:21', 'level': 'WARNING', 'message': 'High memory usage'}
+[2025-05-31T14:36:24.091+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:36:24', 'level': 'WARNING', 'message': 'High memory usage'}
+[2025-05-31T14:36:26.092+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:36:26', 'level': 'ERROR', 'message': 'Payment gateway timeout'}
+[2025-05-31T14:36:28.547+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:36:28', 'level': 'ERROR', 'message': 'Database connection failed'}
+[2025-05-31T14:36:30.547+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:36:30', 'level': 'INFO', 'message': 'Page loaded'}
+[2025-05-31T14:36:32.549+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:36:32', 'level': 'INFO', 'message': 'User logged in'}
+[2025-05-31T14:36:34.549+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:36:34', 'level': 'INFO', 'message': 'Search executed'}
+[2025-05-31T14:36:36.547+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:36:36', 'level': 'WARNING', 'message': 'High memory usage'}
+[2025-05-31T14:36:40.054+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:36:40', 'level': 'ERROR', 'message': 'Payment gateway timeout'}
+[2025-05-31T14:36:42.054+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:36:42', 'level': 'ERROR', 'message': 'Database connection failed'}
+[2025-05-31T14:36:44.055+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:36:44', 'level': 'ERROR', 'message': 'Database connection failed'}
+[2025-05-31T14:36:46.058+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:36:46', 'level': 'WARNING', 'message': 'High memory usage'}
+[2025-05-31T14:36:48.060+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:36:48', 'level': 'WARNING', 'message': 'Slow response time'}
+[2025-05-31T14:36:50.060+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:36:50', 'level': 'ERROR', 'message': 'Database connection failed'}
+[2025-05-31T14:36:52.061+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:36:52', 'level': 'INFO', 'message': 'Search executed'}
+[2025-05-31T14:36:54.062+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:36:54', 'level': 'INFO', 'message': 'User logged in'}
+[2025-05-31T14:36:56.062+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:36:56', 'level': 'WARNING', 'message': 'High memory usage'}
+[2025-05-31T14:36:58.063+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:36:58', 'level': 'WARNING', 'message': 'Slow response time'}
+[2025-05-31T14:37:00.063+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:37:00', 'level': 'WARNING', 'message': 'High memory usage'}
+[2025-05-31T14:37:02.064+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:37:02', 'level': 'WARNING', 'message': 'Slow response time'}
+[2025-05-31T14:37:04.065+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:37:04', 'level': 'WARNING', 'message': 'High memory usage'}
+[2025-05-31T14:37:06.058+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:37:06', 'level': 'WARNING', 'message': 'Slow response time'}
+[2025-05-31T14:37:08.060+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:37:08', 'level': 'ERROR', 'message': 'Database connection failed'}
+[2025-05-31T14:37:10.059+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:37:10', 'level': 'WARNING', 'message': 'Slow response time'}
+[2025-05-31T14:37:12.060+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:37:12', 'level': 'INFO', 'message': 'Search executed'}
+[2025-05-31T14:37:14.067+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:37:14', 'level': 'INFO', 'message': 'User logged in'}
+[2025-05-31T14:37:16.994+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:37:16', 'level': 'ERROR', 'message': 'Database connection failed'}
+[2025-05-31T14:37:22.288+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:37:18', 'level': 'INFO', 'message': 'User logged in'}
+[2025-05-31T14:37:25.290+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:37:20', 'level': 'INFO', 'message': 'Page loaded'}
+[2025-05-31T14:37:26.676+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:37:22', 'level': 'WARNING', 'message': 'High memory usage'}
+[2025-05-31T14:37:26.679+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:37:25', 'level': 'ERROR', 'message': 'Database connection failed'}
+[2025-05-31T14:37:27.308+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:37:27', 'level': 'INFO', 'message': 'User logged in'}
+[2025-05-31T14:37:30.238+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:37:30', 'level': 'INFO', 'message': 'Search executed'}
+[2025-05-31T14:37:32.239+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:37:32', 'level': 'WARNING', 'message': 'Slow response time'}
+[2025-05-31T14:37:34.240+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:37:34', 'level': 'ERROR', 'message': 'Database connection failed'}
+[2025-05-31T14:37:35.328+0000] {job.py:229} INFO - Heartbeat recovered after 24.69 seconds
+[2025-05-31T14:37:36.238+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:37:36', 'level': 'WARNING', 'message': 'Slow response time'}
+[2025-05-31T14:37:38.628+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:37:38', 'level': 'WARNING', 'message': 'Slow response time'}
+[2025-05-31T14:37:40.628+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:37:40', 'level': 'ERROR', 'message': 'Payment gateway timeout'}
+[2025-05-31T14:37:42.629+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:37:42', 'level': 'INFO', 'message': 'Page loaded'}
+[2025-05-31T14:37:44.629+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:37:44', 'level': 'WARNING', 'message': 'Slow response time'}
+[2025-05-31T14:37:46.630+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:37:46', 'level': 'ERROR', 'message': 'Payment gateway timeout'}
+[2025-05-31T14:37:48.630+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:37:48', 'level': 'WARNING', 'message': 'High memory usage'}
+[2025-05-31T14:37:50.757+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:37:50', 'level': 'WARNING', 'message': 'High memory usage'}
+[2025-05-31T14:37:52.754+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:37:52', 'level': 'WARNING', 'message': 'Slow response time'}
+[2025-05-31T14:37:54.754+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:37:54', 'level': 'INFO', 'message': 'User logged in'}
+[2025-05-31T14:37:56.755+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:37:56', 'level': 'INFO', 'message': 'Page loaded'}
+[2025-05-31T14:37:59.023+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:37:59', 'level': 'ERROR', 'message': 'Database connection failed'}
+[2025-05-31T14:38:01.270+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:38:01', 'level': 'INFO', 'message': 'Page loaded'}
+[2025-05-31T14:38:03.271+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:38:03', 'level': 'ERROR', 'message': 'Payment gateway timeout'}
+[2025-05-31T14:38:05.582+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:38:05', 'level': 'WARNING', 'message': 'Slow response time'}
+[2025-05-31T14:38:07.570+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:38:07', 'level': 'WARNING', 'message': 'Slow response time'}
+[2025-05-31T14:38:11.580+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:38:11', 'level': 'INFO', 'message': 'Search executed'}
+[2025-05-31T14:38:13.581+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:38:13', 'level': 'WARNING', 'message': 'Slow response time'}
+[2025-05-31T14:38:16.558+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:38:16', 'level': 'WARNING', 'message': 'Slow response time'}
+[2025-05-31T14:38:18.559+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:38:18', 'level': 'WARNING', 'message': 'High memory usage'}
+[2025-05-31T14:38:20.581+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:38:20', 'level': 'INFO', 'message': 'Page loaded'}
+[2025-05-31T14:38:35.150+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:38:23', 'level': 'ERROR', 'message': 'Database connection failed'}
+[2025-05-31T14:38:36.364+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:38:25', 'level': 'INFO', 'message': 'Page loaded'}
+[2025-05-31T14:38:41.805+0000] {subprocess.py:93} INFO - Sending log: {'timestamp': '2025-05-31 14:38:28', 'level': 'ERROR', 'message': 'Payment gateway timeout'}

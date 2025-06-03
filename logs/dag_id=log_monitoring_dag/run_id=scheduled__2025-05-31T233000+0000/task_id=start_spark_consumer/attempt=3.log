@@ -1,0 +1,17 @@
+[2025-06-01T11:22:54.391+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-01T11:23:40.595+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: log_monitoring_dag.start_spark_consumer scheduled__2025-05-31T23:30:00+00:00 [queued]>
+[2025-06-01T11:23:42.337+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: log_monitoring_dag.start_spark_consumer scheduled__2025-05-31T23:30:00+00:00 [queued]>
+[2025-06-01T11:23:42.521+0000] {taskinstance.py:2865} INFO - Starting attempt 3 of 4
+[2025-06-01T11:24:03.569+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): start_spark_consumer> on 2025-05-31 23:30:00+00:00
+[2025-06-01T11:24:48.079+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=652) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-06-01T11:25:05.621+0000] {standard_task_runner.py:72} INFO - Started process 714 to run task
+[2025-06-01T11:25:03.841+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'log_monitoring_dag', 'start_spark_consumer', 'scheduled__2025-05-31T23:30:00+00:00', '--job-id', '110', '--raw', '--subdir', 'DAGS_FOLDER/log_monitoring_dag.py', '--cfg-path', '/tmp/tmpuzl0zuj3']
+[2025-06-01T11:25:20.799+0000] {standard_task_runner.py:105} INFO - Job 110: Subtask start_spark_consumer
+[2025-06-01T11:59:37.115+0000] {job.py:229} INFO - Heartbeat recovered after 42319.64 seconds
+[2025-06-01T11:59:49.916+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-06-01T11:59:54.632+0000] {job.py:229} INFO - Heartbeat recovered after 100.98 seconds
+[2025-06-01T11:59:58.966+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to None. Terminating instance.
+[2025-06-01T11:59:58.969+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-06-01T11:59:58.980+0000] {process_utils.py:132} INFO - Sending 15 to group 714. PIDs of all processes in the group: [714]
+[2025-06-01T11:59:58.991+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 714
+[2025-06-01T11:59:59.620+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=714, status='terminated', exitcode=<Negsignal.SIGTERM: -15>, started='11:24:05') (714) terminated with exit code -15

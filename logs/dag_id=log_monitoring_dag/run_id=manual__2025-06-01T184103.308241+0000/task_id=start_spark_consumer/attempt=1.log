@@ -1,0 +1,4 @@
+[2025-06-01T18:47:28.650+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-01T18:47:36.091+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: log_monitoring_dag.start_spark_consumer manual__2025-06-01T18:41:03.308241+00:00 [queued]>
+[2025-06-01T18:47:36.266+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: log_monitoring_dag.start_spark_consumer manual__2025-06-01T18:41:03.308241+00:00 [queued]>
+[2025-06-01T18:47:36.266+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2

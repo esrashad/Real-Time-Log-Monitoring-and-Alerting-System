@@ -1,0 +1,18 @@
+[2025-06-01T18:45:45.306+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-01T18:45:45.507+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: log_monitoring_dag.start_spark_consumer scheduled__2025-06-01T18:35:00+00:00 [queued]>
+[2025-06-01T18:45:45.522+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: log_monitoring_dag.start_spark_consumer scheduled__2025-06-01T18:35:00+00:00 [queued]>
+[2025-06-01T18:45:45.523+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-06-01T18:45:45.604+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): start_spark_consumer> on 2025-06-01 18:35:00+00:00
+[2025-06-01T18:45:45.637+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=1350) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-06-01T18:45:45.641+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'log_monitoring_dag', 'start_spark_consumer', 'scheduled__2025-06-01T18:35:00+00:00', '--job-id', '112', '--raw', '--subdir', 'DAGS_FOLDER/log_monitoring_dag.py', '--cfg-path', '/tmp/tmp220oxcn1']
+[2025-06-01T18:45:45.730+0000] {standard_task_runner.py:72} INFO - Started process 1357 to run task
+[2025-06-01T18:45:45.730+0000] {standard_task_runner.py:105} INFO - Job 112: Subtask start_spark_consumer
+[2025-06-01T18:45:45.775+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-06-01T18:45:46.766+0000] {task_command.py:467} INFO - Running <TaskInstance: log_monitoring_dag.start_spark_consumer scheduled__2025-06-01T18:35:00+00:00 [running]> on host 61a0313acf02
+[2025-06-01T18:45:46.768+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-06-01T18:45:47.888+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='log_monitoring_dag' AIRFLOW_CTX_TASK_ID='start_spark_consumer' AIRFLOW_CTX_EXECUTION_DATE='2025-06-01T18:35:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-01T18:35:00+00:00'
+[2025-06-01T18:45:47.899+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-06-01T18:45:47.922+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-06-01T18:45:47.990+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n            docker run --rm             --network realtime_log_monitoring_default             -v /opt/***/app:/app             bitnami/spark:3.3.0             spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.0 /app/log_consumer.py\n        ']
+[2025-06-01T18:45:48.379+0000] {subprocess.py:86} INFO - Output:
+[2025-06-01T18:46:31.840+0000] {job.py:229} INFO - Heartbeat recovered after 34.87 seconds
