@@ -122,20 +122,6 @@ real_time_log_monitoring/
 
 ---
 
-## 🔄 Future Enhancements
-
-* Integrate email/SMS notifications for alerts.
-* Deploy to Kubernetes.
-* Store filtered logs in a database.
-
----
-
-## 🧑‍💻 Author
-
-Ahmed Ramy — Data Engineer
-
----
-
 ## 📄 License
 
 [MIT License](./LICENSE)
