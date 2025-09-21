@@ -128,14 +128,4 @@ real_time_log_monitoring/
 * Deploy to Kubernetes.
 * Store filtered logs in a database.
 
----
 
-## 🧑‍💻 Author
-
-Ahmed Ramy — Data Engineer
-
----
-
-## 📄 License
-
-[MIT License](./LICENSE)
